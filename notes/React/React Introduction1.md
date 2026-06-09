@@ -603,7 +603,119 @@ React treats lowercase names as HTML tags.
 
 # Build Project 1 – Hello World App (20 Minutes)
 
-### App.jsx
+Sure! Let's run your **first React project** in VS Code step by step.
+
+## Step 1: Install Node.js
+
+Download and install:
+
+[Node.js Official Website](https://nodejs.org?utm_source=chatgpt.com)
+
+After installing, open Terminal and check:
+
+```bash
+node -v
+```
+
+```bash
+npm -v
+```
+
+If both show version numbers, you're ready.
+
+---
+
+## Step 2: Open VS Code
+
+Open VS Code.
+
+Open Terminal:
+
+```text
+Terminal → New Terminal
+```
+
+or press:
+
+```text
+Ctrl + `
+```
+
+---
+
+## Step 3: Create a React Project
+
+Run:
+
+```bash
+npm create vite@latest my-first-react-app
+```
+
+It will ask questions.
+
+Select:
+
+```text
+Project Name: my-first-react-app
+Framework: React
+Variant: JavaScript
+```
+
+---
+
+## Step 4: Move into the Project Folder
+
+```bash
+cd my-first-react-app
+```
+
+---
+
+## Step 5: Install Dependencies
+
+```bash
+npm install
+```
+
+Wait until installation completes.
+
+---
+
+## Step 6: Start the Development Server
+
+```bash
+npm run dev
+```
+
+You will see something like:
+
+```text
+Local: http://localhost:5173/
+```
+
+---
+
+## Step 7: Open in Browser
+
+Hold **Ctrl** and click the link:
+
+```text
+http://localhost:5173/
+```
+
+Your React app will open.
+
+---
+
+## Step 8: Replace App.jsx
+
+Open:
+
+```text
+src/App.jsx
+```
+
+Delete everything and paste:
 
 ```jsx
 function App() {
@@ -618,12 +730,50 @@ function App() {
 export default App;
 ```
 
-Output:
+Save with:
+
+```text
+Ctrl + S
+```
+
+---
+
+## Step 9: See the Output
+
+The browser automatically updates.
+
+You should see:
 
 ```text
 Hello World
+
 My First React App
 ```
+
+---
+
+## Folder Structure
+
+```text
+my-first-react-app/
+│
+├── node_modules/
+├── public/
+├── src/
+│   ├── App.jsx
+│   └── main.jsx
+│
+├── package.json
+└── vite.config.js
+```
+
+For Day 1, focus only on:
+
+```text
+src/App.jsx
+```
+
+That's where you'll write most of your React code.
 
 ---
 
