@@ -254,3 +254,133 @@ Keywords that often indicate Sliding Window:
 4. Learn the Sliding Window pattern before moving to problems.
 
 **Most important:** If you see **many range-sum queries → Prefix Sum**. If you see **continuous subarray/window of size K → Sliding Window**.
+Got it. From now on, when you're learning DSA, I'll give **complete C++ programs** that you can copy, paste, compile, and run directly.
+
+### Example: Prefix Sum (Full Code)
+
+```cpp
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+    vector<int> arr = {2, 4, 6, 8};
+
+    int n = arr.size();
+
+    vector<int> prefix(n);
+
+    prefix[0] = arr[0];
+
+    for(int i = 1; i < n; i++)
+    {
+        prefix[i] = prefix[i - 1] + arr[i];
+    }
+
+    cout << "Prefix Sum Array: ";
+
+    for(int i = 0; i < n; i++)
+    {
+        cout << prefix[i] << " ";
+    }
+
+    return 0;
+}
+```
+
+Output:
+
+```text
+Prefix Sum Array:
+2 6 12 20
+```
+
+### Example: Running Sum (Full Code)
+
+```cpp
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+    vector<int> nums = {1, 2, 3, 4};
+
+    for(int i = 1; i < nums.size(); i++)
+    {
+        nums[i] += nums[i - 1];
+    }
+
+    cout << "Running Sum: ";
+
+    for(int num : nums)
+    {
+        cout << num << " ";
+    }
+
+    return 0;
+}
+```
+
+Output:
+
+```text
+Running Sum:
+1 3 6 10
+```
+
+### Example: Sliding Window (Full Code)
+
+```cpp
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+    vector<int> arr = {1, 2, 3, 4, 5};
+    int k = 3;
+
+    int sum = 0;
+
+    for(int i = 0; i < k; i++)
+    {
+        sum += arr[i];
+    }
+
+    int maxSum = sum;
+
+    for(int i = k; i < arr.size(); i++)
+    {
+        sum = sum - arr[i - k] + arr[i];
+        maxSum = max(maxSum, sum);
+    }
+
+    cout << "Maximum Sum of Subarray Size " << k << " = " << maxSum;
+
+    return 0;
+}
+```
+
+Output:
+
+```text
+Maximum Sum of Subarray Size 3 = 12
+```
+
+### DSA Learning Rule
+
+For every problem, I will provide:
+
+1. Problem Statement
+2. Explanation
+3. Brute Force Approach
+4. Full C++ Code
+5. Time & Space Complexity
+6. Optimal Approach
+7. Full C++ Code
+8. Time & Space Complexity
+9. Interview Notes
+
+This format is best for your placement preparation and GitHub DSA notes.
