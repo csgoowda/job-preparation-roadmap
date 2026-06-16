@@ -3,7 +3,7 @@ using namespace std;
 
 /*
 ==================================================
-PROBLEM: Reverse String
+PROBLEM: Reverse String 
 ==================================================
 
 QUESTION:
@@ -12,7 +12,7 @@ Given a string, reverse it.
 
 --------------------------------------------------
 
-EXAMPLE 1:
+EXAMPLE 1 :
 
 Input:
 "hello"
