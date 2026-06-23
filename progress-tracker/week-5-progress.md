@@ -1,45 +1,60 @@
-# Week 5 Progress
+# 📅 Week 5 Progress
 
-## Week 5 Targets
-
-### DSA
-- [ ] Trees Mastery
-- [ ] BFS
-- [ ] DFS
-- [ ] 15-20 Problems
-
-### SQL
-- [ ] CRUD
-- [ ] WHERE
-- [ ] ORDER BY
-- [ ] GROUP BY
-- [ ] HAVING
-- [ ] JOINS
-
-### PostgreSQL
-- [ ] Database Design
-- [ ] Relationships
-- [ ] Constraints
-
-### Backend
-- [ ] Express + PostgreSQL
-
-### Project
-- [ ] Student Management System (Database Version)
-
-### GitHub
-- [ ] Daily Commits
-- [ ] SQL Notes
-- [ ] Database Diagrams
+**Start Date:** 2026-07-21  
+**End Date:** 2026-07-27  
+**Status:** 🔄 In Progress
 
 ---
 
-## Weekly Outcome Summary
+## 📊 Weekly Overview
 
-By the end of Week 5, you will have accomplished:
-* ~85 DSA problems solved total
-* React fundamentals completed
-* Node.js & Express.js fundamentals completed
-* SQL / PostgreSQL Interview Ready Basics
-* 5 projects built: Todo App, Notes App, Notes Backend, Student CRUD API, Student Management System + PostgreSQL
-* 35-day GitHub commit streak
+| Category | Target | Completed | Status |
+|----------|--------|-----------|--------|
+| SQL Topics | 6 | 0 | 🔄 |
+| Database Design | 100% | 0% | 🔄 |
+| Full Stack Integration | 1 | 0 | 🔄 |
+| Commits | 7 | 0 | 🔄 |
+
+---
+
+## 💾 PostgreSQL Learning
+
+### Topics to Cover
+- [ ] Database Design
+- [ ] CRUD Operations
+- [ ] Joins (INNER, LEFT, RIGHT)
+- [ ] Group By & Aggregations
+- [ ] Relationships (1:1, 1:Many, Many:Many)
+
+---
+
+## 💻 Development Learning
+
+### Database Integration
+- [ ] Connection pooling
+- [ ] Query building
+- [ ] Error handling
+
+### Project: Student Management System
+- **Status:** Not Started
+- **Tech:** Express + PostgreSQL
+- **Database Design:**
+  - [ ] Students table
+  - [ ] Courses table
+  - [ ] Enrollment relationship
+- **API Features:**
+  - [ ] Create student with courses
+  - [ ] Get student with enrolled courses
+  - [ ] Update enrollments
+  - [ ] Delete with cascade
+
+---
+
+## 📋 Next Week Goals (Week 6)
+
+- [ ] Graph algorithms
+- [ ] JWT authentication
+- [ ] Password hashing (bcrypt)
+- [ ] Protected routes
+
+---

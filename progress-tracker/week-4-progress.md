@@ -1,47 +1,70 @@
-# Week 4 Progress
+# 📅 Week 4 Progress
 
-## Week 4 Targets
-
-### DSA
-- [ ] Binary Search
-- [ ] Trees
-- [ ] DFS
-- [ ] BFS
-- [ ] 15-20 Problems
-
-### Express.js
-- [ ] Server Creation
-- [ ] Routing
-- [ ] CRUD APIs
-- [ ] Middleware
-
-### REST APIs
-- [ ] GET
-- [ ] POST
-- [ ] PUT
-- [ ] DELETE
-- [ ] Status Codes
-
-### Postman
-- [ ] API Testing
-
-### Project
-- [ ] Student Management API
-
-### GitHub
-- [ ] Daily Commits
-- [ ] API Documentation
-- [ ] README Updated
+**Start Date:** 2026-07-14  
+**End Date:** 2026-07-20  
+**Status:** 🔄 In Progress
 
 ---
 
-## Weekly Outcome Summary
+## 📊 Weekly Overview
 
-By the end of Week 4, you will have accomplished:
-* ~65-70 DSA problems solved total
-* React fundamentals completed
-* Node.js fundamentals completed
-* Express.js CRUD APIs completed
-* Strong REST API basics
-* 4 projects built: Todo App, Notes App, Notes Backend, Student CRUD API
-* 28-day GitHub commit streak
+| Category | Target | Completed | Status |
+|----------|--------|-----------|--------|
+| DSA Problems | 15-20 | 0 | 🔄 |
+| Express Topics | 4 | 0 | 🔄 |
+| REST API Project | 1 | 0 | 🔄 |
+| Commits | 7 | 0 | 🔄 |
+
+---
+
+## 🧠 DSA Learning: Trees, DFS, BFS
+
+### Topics to Cover
+- [ ] Binary Trees
+  - [ ] Tree traversal (In-order, Pre-order, Post-order)
+  - [ ] DFS implementation
+  - [ ] BFS implementation
+- [ ] Tree Problems
+  - [ ] Maximum depth
+  - [ ] Level order traversal
+
+### Problems Solved
+
+| Problem # | Name | Difficulty | Status |
+|-----------|------|------------|--------|
+| 1 | Invert Binary Tree | Easy | 🔄 |
+| 2 | Max Depth | Easy | 🔄 |
+| 3 | Level Order Traversal | Medium | 🔄 |
+| 4 | DFS Template | Medium | 🔄 |
+
+**Target:** 15-20 problems
+
+---
+
+## 💻 Development Learning
+
+### Express.js
+- [ ] Routing
+- [ ] Request/Response handling
+- [ ] Middleware
+- [ ] Error handling
+
+### Project: Student Management API
+- **Status:** Not Started
+- **Tech:** Express.js
+- **Features:**
+  - [ ] CRUD for students
+  - [ ] Proper routing
+  - [ ] Error handling
+  - [ ] Middleware
+
+---
+
+## 📋 Next Week Goals (Week 5)
+
+- [ ] PostgreSQL fundamentals
+- [ ] Database design
+- [ ] Express + PostgreSQL integration
+- [ ] Build full CRUD system
+
+---

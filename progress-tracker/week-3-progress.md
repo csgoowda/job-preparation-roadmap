@@ -1,47 +1,74 @@
-# Week 3 Progress
+# 📅 Week 3 Progress
 
-## Week 3 Targets
-
-### DSA
-- [ ] Stack
-- [ ] Queue
-- [ ] Recursion
-- [ ] 15-20 Problems
-
-### Node.js
-- [ ] Event Loop
-- [ ] Modules
-- [ ] File System
-- [ ] Async/Await
-- [ ] HTTP Server
-
-### Testing
-- [ ] Postman Basics
-
-### Linux
-- [ ] Process Management
-- [ ] grep
-- [ ] head
-- [ ] tail
-
-### Git
-- [ ] Rebase
-
-### Projects
-- [ ] Notes Backend
-
-### GitHub
-- [ ] Daily Commits
-- [ ] Documentation
+**Start Date:** 2026-07-07  
+**End Date:** 2026-07-13  
+**Status:** 🔄 In Progress
 
 ---
 
-## Weekly Outcome Summary
+## 📊 Weekly Overview
 
-By the end of Week 3, you will have accomplished:
-* ~50 DSA problems solved total
-* React fundamentals completed
-* Node.js fundamentals completed
-* First backend project built
-* Postman basics learned
-* Strong GitHub activity streak
+| Category | Target | Completed | Status |
+|----------|--------|-----------|--------|
+| DSA Problems | 15-20 | 0 | 🔄 |
+| Node.js Topics | 5 | 0 | 🔄 |
+| Backend Project | 1 | 0 | 🔄 |
+| Commits | 7 | 0 | 🔄 |
+
+---
+
+## 🧠 DSA Learning: Stack, Queue, Recursion
+
+### Topics to Cover
+- [ ] Stack
+  - [ ] Implementation
+  - [ ] Applications (parentheses, postfix)
+- [ ] Queue
+  - [ ] Implementation
+  - [ ] BFS preparation
+- [ ] Recursion
+  - [ ] Base case & recursive case
+  - [ ] Call stack visualization
+
+### Problems Solved
+
+| Problem # | Name | Difficulty | Status |
+|-----------|------|------------|--------|
+| 1 | Valid Parentheses | Easy | 🔄 |
+| 2 | Implement Stack | Medium | 🔄 |
+| 3 | Implement Queue | Medium | 🔄 |
+| 4 | Factorial (Recursion) | Easy | 🔄 |
+| 5 | Fibonacci (Recursion) | Easy | 🔄 |
+
+**Target:** 15-20 problems
+
+---
+
+## 💻 Development Learning
+
+### Node.js
+- [ ] Event Loop
+- [ ] Modules & CommonJS
+- [ ] File System (fs module)
+- [ ] Async/Await Patterns
+
+### Backend Project: Notes Backend
+- **Status:** Not Started
+- **Tech:** Node.js, File System
+- **Endpoints:**
+  - [ ] GET all notes
+  - [ ] GET single note
+  - [ ] POST create note
+  - [ ] PUT update note
+  - [ ] DELETE note
+
+---
+
+## 📋 Next Week Goals (Week 4)
+
+- [ ] Trees and Graph fundamentals
+- [ ] Learn Express.js
+- [ ] Build REST APIs
+- [ ] CRUD operations in Express
+
+---

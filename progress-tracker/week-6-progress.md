@@ -1,44 +1,67 @@
-# Week 6 Progress
+# 📅 Week 6 Progress
 
-## Week 6 Targets
-
-### DSA
-- [ ] Graph Basics
-- [ ] DFS
-- [ ] BFS
-- [ ] Connected Components
-- [ ] 15-20 Problems
-
-### Authentication
-- [ ] Register API
-- [ ] Login API
-- [ ] JWT
-- [ ] bcrypt
-- [ ] Protected Routes
-
-### Backend
-- [ ] PostgreSQL User Table
-- [ ] Authentication Module
-
-### Testing
-- [ ] Postman
-- [ ] API Validation
-
-### Project
-- [ ] Authentication System Ready
-
-### GitHub
-- [ ] Daily Commits
-- [ ] API Documentation
-- [ ] Authentication Documentation
+**Start Date:** 2026-07-28  
+**End Date:** 2026-08-03  
+**Status:** 🔄 In Progress
 
 ---
 
-## Weekly Outcome Summary
+## 📊 Weekly Overview
 
-By the end of Week 6, you will have accomplished:
-* ~105 DSA problems solved total
-* React & Node & Express & PostgreSQL basics complete
-* Complete token-based security model with JWT and bcrypt
-* 6 projects built: Todo App, Notes App, Notes Backend, Student CRUD API, Student Management System, Authentication System
-* 42-day GitHub commit streak
+| Category | Target | Completed | Status |
+|----------|--------|-----------|--------|
+| DSA Problems | 15-20 | 0 | 🔄 |
+| Auth Implementation | 100% | 0% | 🔄 |
+| Security Topics | 3 | 0 | 🔄 |
+| Auth Project | 1 | 0 | 🔄 |
+| Commits | 7 | 0 | 🔄 |
+
+---
+
+## 🧠 DSA Learning: Graphs, BFS, DFS
+
+### Topics to Cover
+- [ ] Graph Representation
+- [ ] BFS for graphs
+- [ ] DFS for graphs
+- [ ] Shortest path algorithms
+
+### Problems Solved
+
+| Problem # | Name | Difficulty | Status |
+|-----------|------|------------|--------|
+| 1 | Number of Islands | Medium | 🔄 |
+| 2 | Clone Graph | Medium | 🔄 |
+| 3 | BFS Template | Medium | 🔄 |
+
+---
+
+## 🔐 Authentication Learning
+
+### Topics to Cover
+- [ ] JWT Tokens
+- [ ] Password Hashing (bcrypt)
+- [ ] Protected Routes
+- [ ] Refresh Tokens
+- [ ] Session Management
+
+### Project: Authentication System
+- **Status:** Not Started
+- **Features:**
+  - [ ] User registration
+  - [ ] Login with JWT
+  - [ ] Protected endpoints
+  - [ ] Token refresh
+  - [ ] Logout functionality
+  - [ ] Role-based access
+
+---
+
+## 📋 Next Week Goals (Week 7)
+
+- [ ] Dynamic Programming algorithms
+- [ ] Full-stack React + Express integration
+- [ ] Docker basics
+- [ ] Start capstone project
+
+---
