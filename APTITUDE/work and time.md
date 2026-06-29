@@ -358,3 +358,343 @@ Time
 * Find work completed together.
 * Find remaining work.
 * Divide remaining work by the one-day work of the person who continues.
+
+* # Time and Work - Top 5 Important Questions (Part 2)
+
+These are additional **must-practice Time and Work questions** commonly asked in placement aptitude tests.
+
+---
+
+# Question 6: Three People Working Together
+
+## Question
+
+A can complete a work in **20 days**, B in **30 days**, and C in **60 days**. In how many days will they complete the work together?
+
+## What is the question asking?
+
+We know the time taken by all three people individually.
+
+The question asks **how many days they take together**.
+
+Since everyone works together, **add** their one-day work.
+
+## Solution
+
+### Step 1: Find one-day work
+
+A = **1/20**
+
+B = **1/30**
+
+C = **1/60**
+
+### Step 2: Add all works
+
+LCM = **60**
+
+```text
+1/20 = 3/60
+
+1/30 = 2/60
+
+1/60 = 1/60
+```
+
+```text
+3/60 + 2/60 + 1/60
+
+= 6/60
+
+= 1/10
+```
+
+They complete **1/10** of the work in one day.
+
+### Step 3: Find total time
+
+```text
+Time = 1 ÷ (1/10)
+
+= 10 days
+```
+
+## Answer
+
+**10 days**
+
+### Shortcut
+
+**If everyone works together → Add everyone's one-day work.**
+
+---
+
+# Question 7: Efficiency Based Question
+
+## Question
+
+A is **3 times as efficient as B**. B alone completes a work in **90 days**. In how many days can A complete the work?
+
+## What is the question asking?
+
+The question gives **efficiency**, not days.
+
+Remember:
+
+**Higher efficiency means less time.**
+
+Efficiency and Time are **inversely proportional**.
+
+## Solution
+
+B takes **90 days**.
+
+A is **3 times faster** than B.
+
+So A needs only
+
+```text
+90 ÷ 3 = 30 days
+```
+
+## Answer
+
+**30 days**
+
+### Shortcut
+
+**Time = Given Time ÷ Efficiency Ratio**
+
+---
+
+# Question 8: Wages Distribution
+
+## Question
+
+A completes a work in **6 days** and B in **8 days**. They work together and receive **₹2800**. How much money should A receive?
+
+## What is the question asking?
+
+Money is divided according to **work done**, not equally.
+
+So first find their work ratio.
+
+## Solution
+
+A's work = **1/6**
+
+B's work = **1/8**
+
+Multiply both by LCM (24).
+
+```text
+1/6 = 4/24
+
+1/8 = 3/24
+```
+
+Ratio
+
+```text
+A : B = 4 : 3
+```
+
+Total ratio
+
+```text
+4 + 3 = 7
+```
+
+A's share
+
+```text
+(4/7) × 2800
+
+= ₹1600
+```
+
+## Answer
+
+**₹1600**
+
+### Shortcut
+
+**Money is divided in the same ratio as work done.**
+
+---
+
+# Question 9: Alternate Day Working
+
+## Question
+
+A can complete a work in **10 days** and B in **15 days**. They work on alternate days, starting with A. In how many days will the work be completed?
+
+## What is the question asking?
+
+A works on Day 1.
+
+B works on Day 2.
+
+Again A on Day 3.
+
+Again B on Day 4.
+
+Continue until the work finishes.
+
+## Solution
+
+### Step 1: One-day work
+
+A = **1/10**
+
+B = **1/15**
+
+### Step 2: Work done in two days
+
+```text
+1/10 + 1/15
+
+= 3/30 + 2/30
+
+= 5/30
+
+= 1/6
+```
+
+Every **2 days**, they finish **1/6** of the work.
+
+### Step 3: After 10 days
+
+10 days = 5 cycles
+
+```text
+5 × 1/6
+
+= 5/6 work
+```
+
+Remaining
+
+```text
+1 − 5/6
+
+= 1/6
+```
+
+Now A starts the next day.
+
+A's one-day work = **1/10**
+
+Time needed
+
+```text
+(1/6) ÷ (1/10)
+
+= 10/6
+
+= 1⅔ days
+```
+
+Total time
+
+```text
+10 + 1⅔
+
+= 11⅔ days
+```
+
+## Answer
+
+**11⅔ days**
+
+### Shortcut
+
+Find **work done in one cycle**, then repeat the cycle until only a small part remains.
+
+---
+
+# Question 10: Pipes Filling a Tank
+
+## Question
+
+Pipe A fills a tank in **12 hours** and Pipe B fills it in **18 hours**. If both pipes are opened together, how long will it take to fill the tank?
+
+## What is the question asking?
+
+This question follows the **same concept as Time and Work**.
+
+Instead of workers, we have **pipes**.
+
+Since both fill the tank together, **add** their one-hour work.
+
+## Solution
+
+### Step 1: One-hour filling
+
+A = **1/12**
+
+B = **1/18**
+
+### Step 2: Add
+
+LCM = **36**
+
+```text
+1/12 = 3/36
+
+1/18 = 2/36
+```
+
+```text
+3/36 + 2/36
+
+= 5/36
+```
+
+The pipes fill **5/36** of the tank every hour.
+
+### Step 3: Find total time
+
+```text
+Time = 1 ÷ (5/36)
+
+= 36/5
+
+= 7.2 hours
+```
+
+```text
+0.2 hour = 12 minutes
+```
+
+## Answer
+
+**7 hours 12 minutes**
+
+### Shortcut
+
+**Pipes and Time & Work use the same formula.**
+
+* Worker → Work
+* Pipe → Tank Filling
+
+Both use:
+
+1. Find one-hour work.
+2. Add or subtract.
+3. Take the reciprocal to get the total time.
+
+---
+
+# Final Tips
+
+## Remember These Rules
+
+* **One-day work = 1 / Number of days**
+* **Working together = Add**
+* **Find one person's work = Subtract**
+* **Time = Reciprocal of one-day work**
+* **Higher efficiency = Less time**
+* **Money is divided according to work done**
+* **Pipes and Time & Work follow the same concept**
+
