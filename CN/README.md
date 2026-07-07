@@ -1,6 +1,6 @@
 # Computer Networks Learning Repository
 
-This repository contains well-organized notes and interview preparation materials for Computer Networks. It is designed for students, placement preparation, university exams, and technical interviews.
+This repository contains well-organized  notes and interview preparation materials for Computer Networks. It is designed for students, placement preparation, university exams, and technical interviews.
 
 ## Repository Structure
 
