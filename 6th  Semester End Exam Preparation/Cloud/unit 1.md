@@ -1771,4 +1771,430 @@ This answer is structured according to your uploaded **Unit-1 notes** and **Clou
 
 
 
+# UNIT 1 – Question 6 (20 Marks)
+
+# Explain Dynamic Cloud Infrastructure
+
+**(Answer based on your uploaded notes and reference textbook)**
+
+### 📚 References Used
+
+* **Chapter 1 – Introduction** (Network-Centric Computing, Utility Computing, Cloud Infrastructure) 
+* **Cloud Computing: Theory and Practice** – Chapter 1 (Cloud Infrastructure Concepts) 
+
+> **Note:** Your Unit-1 handwritten notes briefly introduce this topic, while the detailed explanation is available in **Chapter-1 (Marinescu textbook)**.
+
+---
+
+# Introduction
+
+Dynamic Cloud Infrastructure is the **ability of cloud computing to automatically allocate, manage, scale, and release computing resources according to user demand**.
+
+Unlike traditional infrastructure where servers remain fixed, cloud infrastructure is flexible and resources are dynamically assigned whenever users need them.
+
+This improves **resource utilization, performance, and cost efficiency**.
+
+---
+
+# Definition
+
+**Dynamic Cloud Infrastructure** is an infrastructure where computing resources such as servers, storage, memory, network, and applications are **automatically provisioned, scaled, monitored, and released** based on workload requirements.
+
+---
+
+# Dynamic Cloud Infrastructure Diagram
+
+![Image](https://images.openai.com/static-rsc-4/lt1g6lrEmBwBT_pis6sdckJ0JEbGmQU5I-O0YZPVB-Zu-XaSkh-joxAOvQyqovRIi65Zpf2TAX8d2oWEuWJoQWT3VgOKWSF2BqQrvT48q5YcI_RQLG29B3-cEIS9344VT__TU5hHI8UtNAGKkYOTObwc1C5VTUPZMJONgoS1uhda2W7_-omW7aSQr7dtyVMM?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/nqh_uZ9p60Yd1gwBJ0dHJIFuKPtpWGKniG73p4WN7DL99fr_yvX0FFPH27i_zRyVZujuXs3FjJKsRc5yPoccqdnxKg1Ccgh4xBHJr9942tnsv9Qfq3ZaX7FBy2jbYVIZAnuwpEYQLQJhiWb5TX6Y088rDyxdmoQ8rtjnF8j8hq33R66XvaczUVEFqGorOenx?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/iR1fmcJjAYAs_VfXcWuoQih_eFlF92qE-s_2ywS-xmxXrCxrbN0MLIBKeI-k8_mpVF1srEnBPhV41DhaeULtIn3V7bUuptQ1quj7Roe9uLn2e73xk4Q63TiLTSQUwd-d6kj5fC8875F7QRERfhMyMcam3onAQa0XB5_qjCf1nISMY4DtQJae6aCBNPU6vhFc?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/B2WIsEaWLTX4m1ovju7S7ux6uflbGH9cjwp-Fok78dBd-rpzXZ-rAchcDM4w6nBftBlL3z2-y7bOElNMAICcAby9goX05fCa2MiUOujQiS_7UMbMnpX4SVTrt04JgXLfljpYpL_dkbUiugYR2WB3Nmz7GIVU5uVIzSV_ycqLaCablSC01pgdvbIUzutoSZUi?purpose=fullsize)
+
+**Diagram Name:** *Dynamic Cloud Infrastructure*
+
+Draw and label:
+
+* Users
+* Internet
+* Load Balancer
+* Cloud Controller
+* Virtual Machines
+* Storage
+* Database
+
+---
+
+# Working of Dynamic Cloud Infrastructure
+
+### Step 1
+
+Users send requests through the Internet.
+
+↓
+
+### Step 2
+
+The Cloud Controller monitors system workload.
+
+↓
+
+### Step 3
+
+Additional Virtual Machines are automatically created when demand increases.
+
+↓
+
+### Step 4
+
+Storage and Network resources are allocated dynamically.
+
+↓
+
+### Step 5
+
+When demand decreases, unused resources are automatically removed.
+
+---
+
+# Features
+
+### 1. Elastic Resource Allocation
+
+Resources increase or decrease automatically.
+
+---
+
+### 2. Virtualization
+
+Physical servers are converted into multiple Virtual Machines.
+
+---
+
+### 3. Automatic Scaling
+
+Resources scale without human intervention.
+
+---
+
+### 4. Resource Pooling
+
+Resources are shared among multiple users.
+
+---
+
+### 5. High Availability
+
+Services remain available even during server failures.
+
+---
+
+### 6. Load Balancing
+
+User requests are distributed among multiple servers.
+
+---
+
+### 7. Pay-as-you-go
+
+Users pay only for the resources consumed.
+
+---
+
+# Advantages
+
+* Better Performance
+* Reduced Cost
+* High Availability
+* Automatic Resource Allocation
+* Improved Scalability
+* Better Resource Utilization
+* Faster Service Delivery
+* Fault Tolerance
+
+---
+
+# Applications
+
+* Amazon AWS
+* Google Cloud
+* Microsoft Azure
+* Netflix
+* YouTube
+* Banking Systems
+
+---
+
+# Conclusion
+
+Dynamic Cloud Infrastructure enables organizations to use computing resources efficiently by automatically allocating and releasing resources according to demand. It provides scalability, flexibility, reliability, and cost savings, making it one of the key features of modern cloud computing.
+
+---
+
+# ⭐ Examiner Keywords
+
+* Dynamic Infrastructure
+* Auto Scaling
+* Elasticity
+* Resource Pooling
+* Virtualization
+* Load Balancing
+* High Availability
+* Cloud Controller
+
+---
+
+---
+
+# UNIT 1 – Question 7 (20 Marks)
+
+# Explain Cloud Adoption and Reasons for Cloud Adoption
+
+**(Answer based on your uploaded notes and textbook)**
+
+### 📚 References Used
+
+* **Chapter 1 – Introduction** (Cloud Computing Adoption, Utility Computing, Benefits) 
+* **Cloud Computing: Theory and Practice** – Chapter 1 
+* **Unit-1 Notes** (Benefits and Cloud Introduction) 
+
+---
+
+# Introduction
+
+Cloud Adoption is the process of **moving an organization's IT infrastructure, applications, and data from traditional systems to cloud computing services**.
+
+Organizations adopt cloud computing to improve performance, reduce costs, and increase flexibility.
+
+Today almost every organization uses cloud services such as AWS, Azure, or Google Cloud.
+
+---
+
+# Definition
+
+**Cloud Adoption** is the process of implementing cloud technologies and migrating applications, data, and services from traditional infrastructure to cloud platforms.
+
+---
+
+# Cloud Adoption Process Diagram
+
+![Image](https://images.openai.com/static-rsc-4/g1f2IGJ4GVoNY8hYZ1haCGbxcUbC3IKOcQ6coy0u8y9_QvtSxJhd9bdsI3aHKtizfjeH7OXQvY9EODtAooAMfGpkGlRxpbMdlw3mUE1sLb-bHrWTG90qNHz5jeVtzyR5JPF19cMCtBgFZRoEvhulizNh2PQySuz62d7pGuFuwbuJm7dvf0hIMBiZImcH-kLu?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/IdC0Em8QEytvNY-5tBIYRUMFe0Ev2VdalPvMuHUACD36fj_7bYTwR6MdnjZ1UqfPAY2tM3-l_IUf3aHzXXBoxHsJaZDxd1Nyk4Otgp0FyTZX0zEPC0U_KHMvT66uxH4Lbo9S-PjxRAwQPnzTtXagHSj2KI1cuY8x2BwisO1EEMH1HJlu95ItqENR7JL8cNg_?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/kaCiNtJL8RPD66hm4StmRhNti2vuSHX8o0KESrQhxwqYeNmxgFfieyzsuA7Sf3J6TsrsOiiJUsmGpsa97UJ9ezgLNO7h5RL_PmDpA3fl6MikYpWqVQwPjVQhjzsTphGJIRxW3txRocBrC4aw00Kf_whXzK6xtdtmrasWjDTJX4n-7vMTqDju5Ps0KupxcX19?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/_quS6xhyUi78GgREEXsTefJ5SXmT__8AoJ6NcstwPyPGs2y_eznuRrYEe4LLgp3ojB__XdMUcLbWCR8ifsRKliOQUPwlhGIHG_s1OuQyAMG5yzJR_OmX2Cn7yyZkX1eSizQv11UHuay1rV3U-HSvG3UW5gZ2HY1OoX5mHiOm2HgBgk8T76hkCAd6gNd-0E3U?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/-ZMnF5zC8Uj0sV3tSSSWdHm_pzW9FMSSZg6XGXDihOgXneKJ3YH7watZT0ZrGKJu_HZU6PW0mXSxjr0L8GVKKAG4_hJHaMENuPawjpLe0pu0KU8GK6jWA69SzyIJJgwvsAyQc8uT4wtHUAQ6C1ePLYm7Pm81ng8C449TqAuvpzqWHL0CQoXl4zHoPmIo2JGy?purpose=fullsize)
+
+**Diagram Name:** *Cloud Adoption Process*
+
+Draw these steps:
+
+```
+Assessment
+↓
+
+Planning
+↓
+
+Migration
+↓
+
+Deployment
+↓
+
+Optimization
+↓
+
+Maintenance
+```
+
+---
+
+# Stages of Cloud Adoption
+
+## 1. Assessment
+
+The organization studies existing infrastructure and identifies applications suitable for cloud migration.
+
+---
+
+## 2. Planning
+
+Select
+
+* Cloud Provider
+* Deployment Model
+* Service Model
+
+and estimate costs.
+
+---
+
+## 3. Migration
+
+Move
+
+* Applications
+* Databases
+* Storage
+
+to the cloud.
+
+---
+
+## 4. Deployment
+
+Cloud services are configured and made available to users.
+
+---
+
+## 5. Optimization
+
+Performance is continuously monitored and resources are optimized.
+
+---
+
+## 6. Maintenance
+
+Regular updates, backups, monitoring, and security management are performed.
+
+---
+
+# Reasons for Cloud Adoption
+
+## 1. Cost Reduction
+
+No need to purchase expensive servers and networking equipment.
+
+---
+
+## 2. Scalability
+
+Resources can be increased or decreased according to business requirements.
+
+---
+
+## 3. Flexibility
+
+Employees can work from anywhere using cloud services.
+
+---
+
+## 4. Faster Deployment
+
+Applications can be deployed within minutes.
+
+---
+
+## 5. High Availability
+
+Cloud providers ensure continuous service with minimum downtime.
+
+---
+
+## 6. Better Collaboration
+
+Employees can work together using shared cloud applications.
+
+---
+
+## 7. Disaster Recovery
+
+Cloud providers maintain multiple backups and data replication.
+
+---
+
+## 8. Automatic Updates
+
+Software updates are managed by cloud providers.
+
+---
+
+## 9. Business Continuity
+
+Organizations continue operations even during disasters.
+
+---
+
+## 10. Improved Security
+
+Cloud providers implement
+
+* Encryption
+* Authentication
+* Firewalls
+* Access Control
+
+---
+
+# Advantages of Cloud Adoption
+
+* Lower Infrastructure Cost
+* Better Performance
+* Easy Maintenance
+* Unlimited Storage
+* Global Accessibility
+* Faster Innovation
+* Increased Productivity
+* Business Agility
+
+---
+
+# Challenges of Cloud Adoption
+
+* Vendor Lock-in
+* Data Privacy
+* Security Risks
+* Internet Dependency
+* Compliance Issues
+* Migration Cost
+* Skill Gap
+
+---
+
+# Real-Life Examples
+
+| Organization | Cloud Platform  |
+| ------------ | --------------- |
+| Netflix      | AWS             |
+| Spotify      | Google Cloud    |
+| Adobe        | Microsoft Azure |
+| Zoom         | AWS             |
+| Gmail        | Google Cloud    |
+
+---
+
+# Conclusion
+
+Cloud Adoption enables organizations to modernize their IT infrastructure by leveraging scalable, flexible, and cost-effective cloud services. Businesses adopt cloud computing to reduce operational costs, improve collaboration, ensure business continuity, and accelerate innovation. Although challenges such as security, migration complexity, and vendor lock-in exist, the long-term benefits make cloud adoption a strategic choice for modern enterprises.
+
+---
+
+# ⭐ Examiner Keywords
+
+* Cloud Adoption
+* Migration
+* Scalability
+* Flexibility
+* Business Agility
+* Disaster Recovery
+* Cost Reduction
+* Digital Transformation
+* Cloud Migration
+* Cloud Optimization
+
+---
+
+# 💯 Exam Tip
+
+For **JSSSTU/VTU semester exams**, these two questions are **less frequently asked as standalone 20-mark questions**. They are commonly asked as:
+
+* **5 marks:** "What is Cloud Adoption?" or "Define Dynamic Cloud Infrastructure."
+* **10 marks:** "Explain the reasons for Cloud Adoption." or "Explain Dynamic Cloud Infrastructure with a diagram."
+
+If they appear as a **20-mark** question, the answers above are comprehensive enough to score full marks.
 
