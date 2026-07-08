@@ -320,3 +320,323 @@ For a **20-mark answer**, always include:
 10. Conclusion
 
 This structure is comprehensive, aligns with your uploaded notes, and is suitable for maximizing marks in a semester exam.
+
+
+
+
+
+# UNIT 1 – Question 2 (20 Marks)
+
+# Explain the Characteristics of Cloud Computing
+
+**(Answer based on your uploaded notes and textbook)**
+
+### References
+
+* **Unit - 1.pdf** – Pages **1–4** (Introduction, cloud concepts) 
+* **Chapter 1 – Introduction** – Pages **2–8** (Cloud computing concepts and delivery models) 
+* **Cloud Computing: Theory and Practice** – Chapter 1 (Cloud fundamentals) 
+
+---
+
+# Introduction
+
+Cloud Computing is a technology that delivers computing resources such as servers, storage, databases, software, and networking over the Internet. One of the main reasons for the popularity of cloud computing is its unique characteristics, which make it flexible, scalable, cost-effective, and highly efficient.
+
+The **National Institute of Standards and Technology (NIST)** defines **five essential characteristics** of cloud computing.
+
+---
+
+# Characteristics of Cloud Computing
+
+## 1. On-Demand Self-Service
+
+### Definition
+
+On-Demand Self-Service means users can automatically access cloud resources whenever they need them **without contacting the cloud service provider**.
+
+### Explanation
+
+* Users can create Virtual Machines (VMs).
+* Increase storage.
+* Launch applications.
+* Delete resources whenever required.
+
+Everything can be done using a web portal or cloud dashboard.
+
+### Example
+
+Creating an AWS EC2 instance within a few minutes.
+
+### Advantages
+
+* Saves time
+* No human intervention
+* Quick resource allocation
+
+---
+
+## 2. Broad Network Access
+
+### Definition
+
+Cloud services are available over the Internet and can be accessed from different devices.
+
+### Explanation
+
+Users can access cloud resources through
+
+* Laptop
+* Mobile
+* Tablet
+* Desktop
+* Thin Client
+
+using standard Internet technologies like browsers and mobile applications.
+
+### Example
+
+Opening Google Drive from a phone or laptop.
+
+### Advantages
+
+* Access from anywhere
+* Supports remote work
+* Better collaboration
+
+---
+
+## 3. Resource Pooling
+
+### Definition
+
+Cloud providers combine their physical resources and share them among multiple customers using a **multi-tenant model**.
+
+### Explanation
+
+Resources include
+
+* CPU
+* Memory
+* Storage
+* Network
+* Database
+
+The user does not know the exact physical location of the allocated resources.
+
+### Example
+
+Many organizations using the same AWS data center while remaining isolated from one another.
+
+### Advantages
+
+* Efficient resource utilization
+* Lower cost
+* Better scalability
+
+---
+
+## 4. Rapid Elasticity
+
+### Definition
+
+Cloud resources can be increased or decreased automatically depending on user demand.
+
+### Explanation
+
+If website traffic suddenly increases,
+
+* CPU increases
+* RAM increases
+* Storage increases
+
+When demand decreases, resources are automatically reduced.
+
+### Example
+
+Amazon increases servers during festival sales like Prime Day.
+
+### Advantages
+
+* High flexibility
+* Better performance
+* No resource wastage
+
+---
+
+## 5. Measured Service
+
+### Definition
+
+Cloud providers continuously monitor resource usage and charge customers only for what they use.
+
+### Explanation
+
+The cloud measures
+
+* CPU usage
+* Storage usage
+* Network bandwidth
+* Number of users
+* Processing time
+
+### Example
+
+AWS bills users only for the hours an EC2 instance runs.
+
+### Advantages
+
+* Pay-as-you-go model
+* Cost control
+* Transparent billing
+
+---
+
+# Additional Characteristics (Often Asked in University Exams)
+
+## 6. Scalability
+
+Scalability is the ability to increase or decrease computing resources based on workload.
+
+### Types
+
+* Vertical Scaling
+* Horizontal Scaling
+
+### Example
+
+Adding more servers during high traffic.
+
+---
+
+## 7. High Availability
+
+Cloud services remain available even if one server fails.
+
+### Advantages
+
+* Continuous service
+* Reduced downtime
+* Fault tolerance
+
+---
+
+## 8. Reliability
+
+Cloud providers maintain backup systems to ensure data and services remain available.
+
+### Example
+
+Data replication across multiple data centers.
+
+---
+
+## 9. Multi-Tenancy
+
+Multiple customers share the same cloud infrastructure while keeping their data isolated and secure.
+
+### Advantages
+
+* Cost reduction
+* Better resource utilization
+
+---
+
+## 10. Virtualization
+
+Virtualization allows multiple Virtual Machines (VMs) to run on a single physical server.
+
+### Benefits
+
+* Better utilization
+* Isolation
+* Easy management
+* Cost savings
+
+---
+
+# Summary Table
+
+| Characteristic         | Description                          | Example                |
+| ---------------------- | ------------------------------------ | ---------------------- |
+| On-Demand Self-Service | Users provision resources themselves | AWS EC2                |
+| Broad Network Access   | Access from anywhere via Internet    | Google Drive           |
+| Resource Pooling       | Shared infrastructure                | AWS Data Center        |
+| Rapid Elasticity       | Auto scale resources                 | Festival Sale Traffic  |
+| Measured Service       | Pay only for usage                   | AWS Billing            |
+| Scalability            | Increase/decrease resources          | Auto Scaling           |
+| High Availability      | Continuous service                   | Multiple Servers       |
+| Reliability            | Backup & Replication                 | Multi-region Storage   |
+| Multi-Tenancy          | Shared cloud with isolation          | Multiple AWS Customers |
+| Virtualization         | Multiple VMs on one server           | VMware, Hyper-V        |
+
+---
+
+# Diagram to Draw in Exam
+
+![Image](https://images.openai.com/static-rsc-4/SxhvL5yAVxqQGxrRHjdK5dsk34fRybLNNuiCDxadsfFJPP59omT2aWg4KAt7kGaBqVCAESFriJDV_-9kHKft4ZBvpbnkrkphwJ7Y2We0HKZ1OdKeaomL5QwZYeDWuYEH2DbY9OqQZ3zB7vLbEDdeTTy1_AuJqiSmS1dc7LA2uUmbC-3Q6MN1g30pZucNCJ4J?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/iK2eKiK5IWDbid6_vKZykOJzZhWoA-PMoYtktQ9oL3kr2Ejz5W6nLH5uPNVVwK9PGO36goWV2akKJPj48Dnx3GrWHQ2vRILBL-fCZ8tPAe1NcikoYZnjYWv-mErWShdI-ZfPC3-gcy--5kAzH1nCgyyDccLkqJPgMjMGpodUBMl6CwUqx76EWxvvB5meKpmN?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/04sClh_al0Tpyya2VmlEs_sWomNY3YAF8xI-1BkljwrGkLAqmOGJ1dbXuyDdHMwnTWGhw8feisrRvmkgJED8vlsDXeHyD34MBsMfUH8fP5Pr8I5Z-ami9hkPoBfX8CdM1yTXOa8WkI-bSeNYXJwcSovejRb25JoG4WkOzEkRHwBDqkNTGsR2K3TDwdaMJwxn?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/XORliyW5MucSoR5QmOSvzze_NqKrTL4s3ZrJNgD0WhO2eu0xBkicJhutF6aUQHe7o7H0BM7DdT-SZEymMiFl-a8y8UXQI-f9EvQbuJy74mBKSyHh8MHF_5z5ac1aDghWJiPC4seaUu8T9J6hhZBmWTtwhmu-PzwEfQNe254NkusFrDQXbLKeuz96XVfSb_BD?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/QJa6ZTmptdKe0Y-e4r-Q-K2MCVGmiqNbXmRtysCN_BT62ih2Yq2jUXAAuxNLbyAdebVHNuGeFbId4s-Nsu4H0fZe45T0L4_qWDBDNGInHbTF6F2T6CKBZWQPm9ItS2625f2gs9fhvbJWH_XYIYJ3dPBSmu9RruUvEus3JXE8zD_VwBzhY6TyL1aQla9TheZ7?purpose=fullsize)
+
+**Diagram Name:** *Five Essential Characteristics of Cloud Computing (NIST Model)*
+
+**Labels to write:**
+
+* On-Demand Self-Service
+* Broad Network Access
+* Resource Pooling
+* Rapid Elasticity
+* Measured Service
+
+---
+
+# Advantages of These Characteristics
+
+* Easy access to resources
+* Cost-effective
+* High scalability
+* Better resource utilization
+* Increased flexibility
+* Improved collaboration
+* Automatic resource management
+* High performance
+
+---
+
+# Conclusion
+
+The characteristics of cloud computing make it one of the most efficient computing models. Features such as **On-Demand Self-Service, Broad Network Access, Resource Pooling, Rapid Elasticity, and Measured Service** enable organizations to reduce costs, improve efficiency, and scale resources according to demand. These characteristics are the foundation of modern cloud platforms such as AWS, Microsoft Azure, and Google Cloud.
+
+---
+
+# ⭐ Examiner Keywords (Write Exactly)
+
+* On-Demand Self-Service
+* Broad Network Access
+* Resource Pooling
+* Rapid Elasticity
+* Measured Service
+* Scalability
+* Multi-Tenancy
+* Virtualization
+* Pay-as-you-go
+* High Availability
+
+## 💯 Scoring Tip
+
+For a **20-mark** answer:
+
+1. Start with the definition and introduction.
+2. Explain the **five NIST characteristics** in detail with examples.
+3. Add the additional characteristics (Scalability, High Availability, Reliability, Multi-Tenancy, Virtualization) if your syllabus or faculty expects extended answers.
+4. Draw the **NIST characteristics diagram**.
+5. End with a short conclusion. This structure is comprehensive and aligns well with your uploaded notes and reference material.
+
+
+
