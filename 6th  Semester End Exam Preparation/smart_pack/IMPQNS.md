@@ -81,3 +81,40 @@ This list combines all the Unit 1 questions from the uploaded papers, removes du
 * ⭐ Explain the wet and dry lamination process with a neat diagram.
 
 This is the complete **Unit 2 question list**, arranged in order, with duplicate questions removed while keeping the original wording.
+
+# **UNIT 3 – Previous Year Questions (Combined & Duplicate Removed)**
+
+## **Part A (Short Questions)**
+
+1. List the factors affecting the selection of printing process.
+2. Explain the process of screen printing with neat steps.
+3. Write a short note on heat sealing process.
+
+---
+
+## **Part B (Long Questions / 10 Marks)**
+
+1. Explain gravure and letter press printing methods.
+
+2. What are the key factors that influence the choice of a printing process for packaging materials? Illustrate with examples.
+
+3. Explain the different types of sealing methods in packaging with suitable examples.
+
+4. Explain the lithography and silk screen printing methods used to print on the packaging.
+
+5. Explain the ultrasonic and heat sealing process.
+
+---
+
+## **Frequently Repeated Questions (Very Important ⭐⭐⭐)**
+
+* ⭐ What are the key factors that influence the choice of a printing process for packaging materials? *(Asked multiple times)*
+* ⭐ Explain gravure and letter press printing methods.
+* ⭐ Explain the lithography and silk screen printing methods used to print on the packaging.
+* ⭐ Explain the ultrasonic and heat sealing process.
+* ⭐ Explain the different types of sealing methods in packaging with suitable examples.
+* ⭐ Write a short note on heat sealing process.
+
+This is the complete **Unit 3 question list**, arranged in order with duplicate questions removed while keeping the original wording.
+
+
