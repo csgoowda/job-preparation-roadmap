@@ -117,4 +117,46 @@ This is the complete **Unit 2 question list**, arranged in order, with duplicate
 
 This is the complete **Unit 3 question list**, arranged in order with duplicate questions removed while keeping the original wording.
 
+# **UNIT 4 – Previous Year Questions (Combined & Duplicate Removed)**
+
+## **Part A (Short Questions)**
+
+1. Explain the concept of recycling strategy for packaging materials.
+2. Explain the objectives of vibration testing in package evaluation.
+3. Compare active and intelligent packaging with examples.
+
+---
+
+## **Part B (Long Questions / 10 Marks)**
+
+1. How are polymer laminate materials tested for packaging suitability? Explain any five relevant test methods.
+
+   **OR**
+
+   Explain the objective and process of any four/five test methods used to evaluate blow molded containers.
+
+2. Explain any one type of **WVTR** and **GTR** test methods. Why is it important in package testing?
+
+3. Explain and justify the importance of vibration testing in evaluating packaging performance during transportation and distribution.
+
+4. What are the factors affecting the shelf life of a product? How does packaging help in extending it?
+
+5. What is **WVTR**? Explain any **two methods** used to measure WVTR.
+
+6. What is smart packaging? Discuss its applications in food and healthcare industries.
+
+7. Explain the current trends and challenges in implementing advanced packaging materials.
+
+---
+
+## **Frequently Repeated Questions (Very Important ⭐⭐⭐)**
+
+* ⭐ Explain the objective and process of any four/five test methods used to evaluate blow molded containers. *(Asked multiple times)*
+* ⭐ What is smart packaging? Discuss its applications in food and healthcare industries. *(Asked multiple times)*
+* ⭐ Explain the concept of recycling strategy for packaging materials.
+* ⭐ What is WVTR? Explain any two methods used to measure WVTR.
+* ⭐ Explain any one type of WVTR and GTR test methods. Why is it important in package testing?
+* ⭐ Explain and justify the importance of vibration testing in evaluating packaging performance during transportation and distribution.
+
+This is the complete **Unit 4 question list**, arranged in order with duplicate questions removed while preserving the original wording.
 
