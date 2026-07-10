@@ -233,3 +233,232 @@ In numerical questions, always follow this order:
 ### References (Uploaded Material)
 
 * **08ClassBasic.ppt** – *Decision Tree Induction: An Example*, *Algorithm for Decision Tree Induction*, *Information Gain (ID3/C4.5)*, *Attribute Selection: Information Gain*.
+
+
+# Explain the K-Nearest Neighbour (KNN) Algorithm with Problem
+
+## Definition
+
+**K-Nearest Neighbour (KNN)** is a **lazy learning** and **instance-based learning** classification algorithm. It stores all the training data and delays processing until a new (unknown) tuple is given for classification. 
+
+---
+
+# Basic Idea
+
+The uploaded material explains that:
+
+* Every training instance is represented as a **point in an n-dimensional space**.
+* The **nearest neighbours** are determined using **Euclidean distance**.
+* For **discrete class labels**, the unknown tuple is assigned the **most common class** among its **k nearest neighbours**.
+* For **real-valued prediction**, the output is the **mean value** of the k nearest neighbours.
+
+---
+
+# KNN Algorithm
+
+### Input
+
+* Training dataset
+* Unknown tuple (x_q)
+* Value of **k**
+
+### Output
+
+* Predicted class of (x_q)
+
+### Algorithm
+
+**Step 1:** Store all training tuples.
+
+**Step 2:** Choose the value of **k**.
+
+**Step 3:** Calculate the **Euclidean distance** between the unknown tuple and every training tuple.
+
+**Step 4:** Arrange the distances in ascending order.
+
+**Step 5:** Select the **k nearest neighbours**.
+
+**Step 6:** Count the class labels of these neighbours.
+
+**Step 7:** Assign the majority class to the unknown tuple. 
+
+---
+
+# Euclidean Distance Formula
+
+For two points
+
+[
+P(x_1,y_1),;Q(x_2,y_2)
+]
+
+[
+\boxed{d=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}}
+]
+
+The uploaded material states that neighbours are defined in terms of **Euclidean distance**. 
+
+---
+
+# Solved Problem
+
+### Given Training Data
+
+| Point |  X |  Y | Class |
+| ----- | -: | -: | :---- |
+| A     |  1 |  1 | Yes   |
+| B     |  2 |  2 | Yes   |
+| C     |  3 |  3 | No    |
+| D     |  6 |  5 | No    |
+| E     |  7 |  7 | No    |
+
+Unknown point:
+
+[
+Q=(3,2)
+]
+
+Choose
+
+[
+k=3
+]
+
+---
+
+## Step 1: Calculate Euclidean Distance
+
+### Distance from A
+
+[
+\sqrt{(3-1)^2+(2-1)^2}
+=\sqrt{4+1}
+=\sqrt5
+=2.236
+]
+
+---
+
+### Distance from B
+
+[
+\sqrt{(3-2)^2+(2-2)^2}
+=\sqrt1
+=1
+]
+
+---
+
+### Distance from C
+
+[
+\sqrt{(3-3)^2+(2-3)^2}
+=\sqrt1
+=1
+]
+
+---
+
+### Distance from D
+
+[
+\sqrt{(3-6)^2+(2-5)^2}
+=\sqrt{18}
+=4.243
+]
+
+---
+
+### Distance from E
+
+[
+\sqrt{(3-7)^2+(2-7)^2}
+=\sqrt{41}
+=6.403
+]
+
+---
+
+## Step 2: Distance Table
+
+| Point | Class | Distance |
+| ----- | ----- | -------: |
+| B     | Yes   |    1.000 |
+| C     | No    |    1.000 |
+| A     | Yes   |    2.236 |
+| D     | No    |    4.243 |
+| E     | No    |    6.403 |
+
+---
+
+## Step 3: Select the 3 Nearest Neighbours
+
+| Neighbour | Class |
+| --------- | ----- |
+| B         | Yes   |
+| C         | No    |
+| A         | Yes   |
+
+---
+
+## Step 4: Majority Voting
+
+| Class | Count |
+| ----- | ----: |
+| Yes   |     2 |
+| No    |     1 |
+
+---
+
+## Final Classification
+
+Since **Yes** has the majority among the **3 nearest neighbours**,
+
+[
+\boxed{\text{Unknown point }(3,2)\text{ belongs to Class YES.}}
+]
+
+---
+
+# Discussion on KNN (from the uploaded material)
+
+The uploaded material further explains:
+
+* For **real-valued prediction**, KNN returns the **mean value** of the k nearest neighbours.
+* In **distance-weighted KNN**, closer neighbours are given greater weight.
+* KNN is **robust to noisy data** because it averages or votes over multiple neighbours.
+* A limitation is the **curse of dimensionality**, where irrelevant attributes can dominate distance calculations. This can be reduced by stretching axes or removing less relevant attributes. 
+
+---
+
+# Advantages
+
+* Simple and easy to implement.
+* No training phase (lazy learner).
+* Can handle both classification and prediction.
+* Robust to noisy data when an appropriate value of **k** is chosen.
+
+---
+
+# Disadvantages
+
+* High prediction time because all training data must be searched.
+* Requires storing the entire training dataset.
+* Performance depends on the choice of **k**.
+* Suffers from the **curse of dimensionality**. 
+
+---
+
+# Applications
+
+* Pattern recognition
+* Medical diagnosis
+* Recommendation systems
+* Image classification
+* Text classification 
+
+---
+
+## References (Uploaded Material)
+
+* **09ClassAdvanced.ppt** – *Lazy Learner: Instance-Based Methods*, *The k-Nearest Neighbor Algorithm*, *Discussion on the k-NN Algorithm*.
