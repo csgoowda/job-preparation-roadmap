@@ -121,19 +121,6 @@ The algorithm uses a **candidate generation-and-test approach**. It first finds 
 * Bioinformatics.
 
 
-# Explain the Apriori Algorithm with an Example and Solve a Problem
-
-## Apriori Algorithm
-
-**Definition**
-
-The **Apriori algorithm** is a **candidate generation and test approach** used to find **frequent itemsets** in a transaction database.
-
-It is based on the **Apriori pruning principle**:
-
-> **If an itemset is infrequent, then all of its supersets are also infrequent.** Therefore, such supersets are **not generated or tested**. 
-
----
 
 ## Apriori Algorithm Steps
 
