@@ -1,238 +1,161 @@
-# Part 2 – Decision Tree Problem (Step by Step)
+# Decision Tree Induction
 
-This is the standard **Buy_Computer** example used in your uploaded material for explaining **Decision Tree Induction using Information Gain (ID3)**.
+## Definition
 
----
-
-# Step 1: Training Dataset
-
-| ID |  Age  | Income | Student | Credit Rating | Buys Computer |
-| -: | :---: | :----: | :-----: | :-----------: | :-----------: |
-|  1 |  <=30 |  High  |    No   |      Fair     |       No      |
-|  2 |  <=30 |  High  |    No   |   Excellent   |       No      |
-|  3 | 31–40 |  High  |    No   |      Fair     |      Yes      |
-|  4 |  >40  | Medium |    No   |      Fair     |      Yes      |
-|  5 |  >40  |   Low  |   Yes   |      Fair     |      Yes      |
-|  6 |  >40  |   Low  |   Yes   |   Excellent   |       No      |
-|  7 | 31–40 |   Low  |   Yes   |   Excellent   |      Yes      |
-|  8 |  <=30 | Medium |    No   |      Fair     |       No      |
-|  9 |  <=30 |   Low  |   Yes   |      Fair     |      Yes      |
-| 10 |  >40  | Medium |   Yes   |      Fair     |      Yes      |
-| 11 |  <=30 | Medium |   Yes   |   Excellent   |      Yes      |
-| 12 | 31–40 | Medium |    No   |   Excellent   |      Yes      |
-| 13 | 31–40 |  High  |   Yes   |      Fair     |      Yes      |
-| 14 |  >40  | Medium |    No   |   Excellent   |       No      |
-
-*(This is the dataset used in the Decision Tree example in your uploaded material.)*
+**Decision Tree Induction** is a supervised learning method used for **classification**. It constructs a decision tree from a set of **class-labeled training data** by recursively selecting the attribute that best splits the data. The resulting model is then used to classify new or unseen data. 
 
 ---
 
-# Step 2: Count Class Labels
+# What is a Decision Tree?
 
-| Class | Count |
-| ----- | ----: |
-| Yes   |     9 |
-| No    |     5 |
-| Total |    14 |
+A **Decision Tree** is a tree-like structure in which:
+
+* **Root Node** → Represents the best attribute selected for splitting.
+* **Internal Node** → Represents a test on an attribute.
+* **Branch** → Represents the outcome of the test.
+* **Leaf Node** → Represents the class label (Yes/No, Positive/Negative, etc.).
 
 ---
 
-# Step 3: Calculate Entropy of Dataset
+# Decision Tree Induction Algorithm
+
+The uploaded material describes the basic decision tree induction as a **greedy, top-down recursive divide-and-conquer algorithm**.
+
+### Algorithm
+
+**Input:**
+
+* Training dataset **D**
+* Attribute list
+
+**Output:**
+
+* Decision Tree
+
+### Steps
+
+**Step 1:** Place all training tuples at the **root node**.
+
+**Step 2:** If all tuples belong to the **same class**, create a **leaf node** and stop.
+
+**Step 3:** If there are **no remaining attributes**, assign the **majority class** and stop.
+
+**Step 4:** Select the **best attribute** using an attribute selection measure (usually **Information Gain**).
+
+**Step 5:** Split the dataset according to the selected attribute.
+
+**Step 6:** Repeat the same process recursively for every partition.
+
+**Step 7:** Continue until:
+
+* all tuples belong to one class,
+* no attribute remains, or
+* no tuples remain. 
+
+---
+
+# Decision Tree Algorithm (Pseudo Code)
+
+```
+DecisionTree(D)
+
+1. Create a root node.
+2. If all tuples belong to the same class,
+      return Leaf(Class)
+3. If attribute list is empty,
+      return Leaf(Majority Class)
+4. Select the attribute with the highest Information Gain.
+5. Split the dataset based on that attribute.
+6. For each partition,
+      recursively build the decision tree.
+7. Return the completed tree.
+```
+
+This follows the algorithm described in your uploaded slides. 
+
+---
+
+# Attribute Selection Measure
+
+The uploaded material states that **Information Gain (ID3/C4.5)** is used to choose the best attribute.
+
+The attribute with the **highest Information Gain** becomes the root node. 
+
+---
+
+# Entropy Formula
+
+For a dataset **D**,
 
 [
-Entropy(D)=-(9/14)\log_2(9/14)-(5/14)\log_2(5/14)
+Entropy(D)= -\sum_{i=1}^{m} p_i \log_2 p_i
 ]
+
+where
+
+* (p_i) = probability of class (i)
+* (m) = number of classes
+
+
+
+---
+
+# Information Gain Formula
 
 [
-Entropy(D)=0.940
+Gain(A)=Entropy(D)-Entropy_A(D)
 ]
 
----
-
-# Step 4: Information Gain for Age
-
-### Age ≤30
-
-| Yes | No | Total |
-| --: | -: | ----: |
-|   2 |  3 |     5 |
-
-Entropy = **0.971**
+Choose the attribute having the **highest Information Gain**. 
 
 ---
 
-### Age 31–40
+# Advantages
 
-| Yes | No | Total |
-| --: | -: | ----: |
-|   4 |  0 |     4 |
+According to the uploaded material:
 
-Entropy = **0**
-
----
-
-### Age >40
-
-| Yes | No | Total |
-| --: | -: | ----: |
-|   3 |  2 |     5 |
-
-Entropy = **0.971**
+* Simple to understand.
+* Fast learning speed.
+* Can be converted into classification rules.
+* Comparable accuracy with other classification methods.
+* Can use SQL queries for database access. 
 
 ---
 
-### Weighted Entropy
+# Stopping Conditions
 
-| Age Group | Weight | Entropy | Weight × Entropy |
-| --------- | ------ | ------- | ---------------: |
-| ≤30       | 5/14   | 0.971   |            0.347 |
-| 31–40     | 4/14   | 0       |            0.000 |
-| >40       | 5/14   | 0.971   |            0.347 |
+Tree construction stops when:
 
-Total Entropy after split:
-
-[
-0.347+0+0.347=0.694
-]
-
-### Information Gain
-
-[
-Gain(Age)=0.940-0.694
-]
-
-[
-\boxed{Gain(Age)=0.246}
-]
-
-
+* All samples belong to the same class.
+* No more attributes are available.
+* No samples remain. 
 
 ---
 
-# Step 5: Information Gain of Remaining Attributes
+# Resulting Decision Tree (Example in Uploaded Material)
 
-| Attribute     | Information Gain |
-| ------------- | ---------------: |
-| Age           |        **0.246** |
-| Income        |            0.029 |
-| Student       |            0.151 |
-| Credit Rating |            0.048 |
-
-Since **Age has the highest Information Gain**, it is selected as the **root node**. 
-
----
-
-# Step 6: Split the Tree
+The slides use the **Buys_Computer** dataset and produce the following decision tree:
 
 ```
-              Age
-        /       |       \
-     <=30    31-40      >40
+                Age
+           /      |      \
+       <=30     31-40     >40
+        |          |         |
+    Student?      Yes   Credit Rating?
+     /    \                  /      \
+   No     Yes            Fair    Excellent
+   No      Yes            Yes       No
 ```
+
+This is the final decision tree shown in your uploaded material.
 
 ---
 
-# Step 7: Solve Branch "Age = 31–40"
+## References (Uploaded Material)
 
-| Yes | No |
-| --: | -: |
-|   4 |  0 |
+* **08ClassBasic.ppt** – *Decision Tree Induction: An Example*, *Algorithm for Decision Tree Induction*, *Information Gain (ID3/C4.5)*, *Brief Review of Entropy*.
 
-All belong to **Yes**.
-
-```
-31–40 → YES
-```
-
----
-
-# Step 8: Solve Branch "Age ≤30"
-
-| Student | Yes | No |
-| ------- | --: | -: |
-| Yes     |   2 |  0 |
-| No      |   0 |  3 |
-
-Student perfectly classifies the data.
-
-```
-Age ≤30
-      |
-   Student
-   /      \
- Yes       No
- |          |
-Yes        No
-```
-
----
-
-# Step 9: Solve Branch "Age >40"
-
-| Credit Rating | Yes | No |
-| ------------- | --: | -: |
-| Fair          |   3 |  0 |
-| Excellent     |   0 |  2 |
-
-Credit Rating perfectly classifies the data.
-
-```
-Age >40
-      |
-Credit Rating
-   /          \
-Fair      Excellent
- |             |
-Yes            No
-```
-
----
-
-# Final Decision Tree
-
-```text
-                 Age
-            /      |      \
-        <=30     31–40      >40
-          |         |          |
-      Student      Yes   Credit Rating
-      /     \              /        \
-    Yes      No        Fair     Excellent
-     |        |          |           |
-    Yes      No         Yes         No
-```
-
-This is the final decision tree shown in the uploaded material.
-
----
-
-# Final Classification Rules
-
-| Rule                                     | Decision               |
-| ---------------------------------------- | ---------------------- |
-| IF Age = 31–40                           | Buy Computer = **Yes** |
-| IF Age ≤30 AND Student = Yes             | Buy Computer = **Yes** |
-| IF Age ≤30 AND Student = No              | Buy Computer = **No**  |
-| IF Age >40 AND Credit Rating = Fair      | Buy Computer = **Yes** |
-| IF Age >40 AND Credit Rating = Excellent | Buy Computer = **No**  |
-
----
-
-## Exam Tip
-
-In numerical questions, always follow this order:
-
-1. Write the dataset.
-2. Calculate **Entropy(D)**.
-3. Compute **Information Gain** for each attribute.
-4. Select the attribute with the **highest Information Gain** as the root.
-5. Repeat the process for each branch.
-6. Draw the final decision tree.
-7. Write the classification rules.
-
-### References (Uploaded Material)
-
-* **08ClassBasic.ppt** – *Decision Tree Induction: An Example*, *Algorithm for Decision Tree Induction*, *Information Gain (ID3/C4.5)*, *Attribute Selection: Information Gain*.
+**Next (Part 2):** I can solve the **Decision Tree Information Gain problem step by step** (entropy → information gain → root node → complete tree) exactly in the style typically asked in exams.
 
 
 # Part 2 – Decision Tree Problem (Step by Step)
