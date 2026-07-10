@@ -622,3 +622,798 @@ The uploaded material further explains:
 ## References (Uploaded Material)
 
 * **09ClassAdvanced.ppt** – *Lazy Learner: Instance-Based Methods*, *The k-Nearest Neighbor Algorithm*, *Discussion on the k-NN Algorithm*.
+
+
+# Bayesian Classification and Bayesian Belief Network (BBN) with Problems
+
+---
+
+# Part A – Bayesian Classification
+
+## Definition
+
+**Bayesian Classification** is a **statistical classifier** based on **Bayes' Theorem**. It predicts the probability that a given tuple belongs to a particular class and assigns the tuple to the class having the **highest posterior probability**. It is one of the fundamental classification methods discussed in your uploaded classification material.
+
+---
+
+## Bayes' Theorem
+
+For a class (C) and data sample (X),
+
+[
+\boxed{
+P(C|X)=\frac{P(X|C)\times P(C)}{P(X)}
+}
+]
+
+Where:
+
+| Term   | Meaning           |                       |
+| ------ | ----------------- | --------------------- |
+| (P(C   | X))               | Posterior Probability |
+| (P(X   | C))               | Likelihood            |
+| (P(C)) | Prior Probability |                       |
+| (P(X)) | Evidence          |                       |
+
+---
+
+## Bayesian Classification Algorithm
+
+### Step 1
+
+Collect the training dataset.
+
+### Step 2
+
+Calculate the **prior probability** of each class.
+
+### Step 3
+
+Calculate the **conditional probability** of each attribute for every class.
+
+### Step 4
+
+Apply **Bayes' Theorem**.
+
+### Step 5
+
+Calculate the posterior probability for every class.
+
+### Step 6
+
+Assign the tuple to the class having the **highest posterior probability**. 
+
+---
+
+# Solved Problem
+
+### Training Data
+
+| ID | Weather  | Play |
+| -- | -------- | ---- |
+| 1  | Sunny    | No   |
+| 2  | Sunny    | No   |
+| 3  | Overcast | Yes  |
+| 4  | Rain     | Yes  |
+| 5  | Rain     | Yes  |
+| 6  | Sunny    | Yes  |
+
+Classify:
+
+> **Weather = Sunny**
+
+---
+
+## Step 1: Prior Probabilities
+
+| Class | Count | Probability |
+| ----- | ----: | ----------: |
+| Yes   |     4 | 4/6 = 0.667 |
+| No    |     2 | 2/6 = 0.333 |
+
+---
+
+## Step 2: Conditional Probability
+
+### Weather = Sunny
+
+| Class | Count | Probability |
+| ----- | ----: | ----------: |
+| Yes   |     1 |  1/4 = 0.25 |
+| No    |     2 |     2/2 = 1 |
+
+---
+
+## Step 3: Apply Bayes' Theorem
+
+### Probability of Yes
+
+[
+P(Yes)\times P(Sunny|Yes)
+]
+
+[
+=0.667\times0.25
+=0.167
+]
+
+---
+
+### Probability of No
+
+[
+P(No)\times P(Sunny|No)
+]
+
+[
+=0.333\times1
+=0.333
+]
+
+---
+
+## Step 4: Compare
+
+| Class | Probability |
+| ----- | ----------: |
+| Yes   |       0.167 |
+| No    |       0.333 |
+
+---
+
+## Final Answer
+
+Since
+
+[
+0.333>0.167
+]
+
+[
+\boxed{\text{Weather = Sunny } \rightarrow \textbf{Play = No}}
+]
+
+---
+
+# Advantages
+
+* Simple and fast.
+* Works well with large datasets.
+* Probabilistic classifier.
+* Efficient for many classification problems. 
+
+---
+
+# Disadvantages
+
+* Assumes attribute independence (in Naïve Bayes).
+* Performance decreases if attributes are highly dependent. 
+
+---
+
+# Part B – Bayesian Belief Network (BBN)
+
+## Definition
+
+A **Bayesian Belief Network (BBN)** is a **probabilistic graphical model** that represents the relationships among variables using a **Directed Acyclic Graph (DAG)**.
+
+* **Nodes** represent random variables.
+* **Directed edges** represent dependencies.
+* Each node contains a **Conditional Probability Table (CPT)**. 
+
+---
+
+# Components of BBN
+
+| Component                           | Description                               |
+| ----------------------------------- | ----------------------------------------- |
+| Node                                | Random variable                           |
+| Edge                                | Dependency between variables              |
+| Conditional Probability Table (CPT) | Probability of a node given its parent(s) |
+
+---
+
+# Structure
+
+```
+Rain
+   |
+   ▼
+Wet Grass
+   ▲
+   |
+Sprinkler
+```
+
+* **Rain** influences **Wet Grass**.
+* **Sprinkler** also influences **Wet Grass**.
+* The graph is **directed** and contains **no cycles**. 
+
+---
+
+# Bayesian Belief Network Algorithm
+
+### Step 1
+
+Construct a Directed Acyclic Graph (DAG).
+
+### Step 2
+
+Assign Conditional Probability Tables (CPTs) to each node.
+
+### Step 3
+
+Calculate the joint probability using the chain rule.
+
+### Step 4
+
+Use the probabilities to predict the required outcome. 
+
+---
+
+# Solved Problem
+
+## Given
+
+[
+P(Rain)=0.2
+]
+
+[
+P(WetGrass|Rain)=0.9
+]
+
+Find
+
+[
+P(Rain \cap WetGrass)
+]
+
+---
+
+## Step 1
+
+Use the multiplication rule.
+
+[
+P(Rain \cap WetGrass)
+=====================
+
+P(Rain)\times P(WetGrass|Rain)
+]
+
+---
+
+## Step 2
+
+Substitute values.
+
+[
+=0.2\times0.9
+]
+
+[
+=0.18
+]
+
+---
+
+## Final Answer
+
+[
+\boxed{P(Rain \cap WetGrass)=0.18}
+]
+
+---
+
+# Advantages of BBN
+
+* Represents uncertainty effectively.
+* Models dependencies among variables.
+* Handles incomplete information.
+* Supports probabilistic reasoning and prediction. 
+
+---
+
+# Disadvantages
+
+* Building the network can be complex.
+* Requires prior probability information.
+* Computational cost increases with large networks. 
+
+---
+
+# Difference Between Bayesian Classification and Bayesian Belief Network
+
+| Bayesian Classification                             | Bayesian Belief Network                                     |
+| --------------------------------------------------- | ----------------------------------------------------------- |
+| Based on Bayes' theorem.                            | Based on Bayes' theorem and a Directed Acyclic Graph (DAG). |
+| Classifies data into classes.                       | Represents probabilistic relationships among variables.     |
+| Simpler model.                                      | More expressive and can model dependencies.                 |
+| Often assumes independent attributes (Naïve Bayes). | Can model dependent attributes using a network.             |
+
+---
+
+## References (Uploaded Material)
+
+* **09ClassAdvanced.ppt** – *Chapter 9: Classification: Advanced Methods*, *Bayesian Belief Networks*, *Lazy Learners*, *Summary*. 
+* **08ClassBasic.ppt** – *Classification: Basic Concepts* (classification overview). 
+
+
+# Why is Naive Bayes called "Naive"? Explain the Major Ideas of Naive Bayes Classification.
+
+## Definition
+
+**Naive Bayes** is a **probabilistic classification algorithm** based on **Bayes' Theorem**. It predicts the class of an unknown tuple by calculating the **posterior probability** of each class and assigning the tuple to the class with the highest probability.
+
+---
+
+# Why is Naive Bayes called "Naive"?
+
+It is called **"Naive"** because it makes a **naive (simplifying) assumption** that:
+
+> **All attributes (features) are conditionally independent of each other given the class label.**
+
+This means the algorithm assumes that the value of one attribute **does not influence** the value of another attribute once the class is known.
+
+### Example
+
+Suppose we want to classify whether a person will **buy a computer** using the attributes:
+
+* Age
+* Income
+* Student
+* Credit Rating
+
+Naive Bayes assumes that these attributes are **independent** of one another after the class (**Buy Computer = Yes/No**) is known.
+
+In real-world datasets, this assumption is often not true, but the algorithm still performs well in many classification problems. 
+
+---
+
+# Major Ideas of Naive Bayes Classification
+
+The uploaded material explains the following main ideas of Naive Bayes classification.
+
+## 1. Based on Bayes' Theorem
+
+Naive Bayes uses **Bayes' Theorem** to compute the probability that a tuple belongs to a class.
+
+genui{"probability_statistics_learning_block":{"type_id":"BAYES_THEOREM"}}
+
+Where:
+
+* **P(C|X)** = Posterior probability
+* **P(X|C)** = Likelihood
+* **P(C)** = Prior probability
+* **P(X)** = Evidence
+
+
+
+---
+
+## 2. Uses Prior Probability
+
+Before classifying a tuple, the classifier calculates the **prior probability** of each class from the training data.
+
+Example:
+
+| Class | Prior Probability |
+| ----- | ----------------: |
+| Yes   |              9/14 |
+| No    |              5/14 |
+
+---
+
+## 3. Computes Conditional Probability
+
+For every attribute value, the conditional probability is calculated.
+
+Example:
+
+[
+P(Student=Yes \mid Buy=Yes)
+]
+
+These probabilities are obtained from the training dataset. 
+
+---
+
+## 4. Assumes Attribute Independence
+
+Naive Bayes assumes that all predictor attributes are **independent** of one another.
+
+Therefore,
+
+[
+P(X|C)=P(x_1|C)\times P(x_2|C)\times \cdots \times P(x_n|C)
+]
+
+This assumption greatly simplifies the computation. 
+
+---
+
+## 5. Calculates Posterior Probability
+
+Using Bayes' theorem, the posterior probability for every class is computed.
+
+The class with the **highest posterior probability** is selected as the predicted class. 
+
+---
+
+# Naive Bayes Classification Steps
+
+1. Collect the training dataset.
+2. Calculate the **prior probability** of each class.
+3. Calculate the **conditional probability** of each attribute.
+4. Apply **Bayes' theorem**.
+5. Compute the posterior probability for every class.
+6. Assign the tuple to the class with the **highest probability**. 
+
+---
+
+# Advantages
+
+* Simple and easy to implement.
+* Fast training and prediction.
+* Works well with large datasets.
+* Handles high-dimensional data efficiently.
+* Produces probabilistic predictions. 
+
+---
+
+# Disadvantages
+
+* Assumes all attributes are independent.
+* Performance may decrease when attributes are strongly dependent.
+* Probability estimates may be inaccurate if the independence assumption is violated. 
+
+---
+
+# Summary
+
+Naive Bayes is called **"Naive"** because it assumes that all attributes are **conditionally independent** given the class label. It applies **Bayes' Theorem**, computes prior and conditional probabilities, calculates the posterior probability for each class, and assigns the class with the highest posterior probability to the unknown tuple. Despite its simple assumption, it is widely used because it is fast, efficient, and often provides good classification accuracy.
+
+---
+
+## References (Uploaded Material)
+
+* **09ClassAdvanced.ppt** – *Chapter 9: Classification: Advanced Methods* (Bayesian methods overview). 
+* **08ClassBasic.ppt** – *Classification: Basic Concepts*. 
+
+
+# Naive Bayes – Solved Problem (Step by Step)
+
+### Problem
+
+The following training data is given:
+
+| ID |  Weather | Play |
+| -: | :------: | :--: |
+|  1 |   Sunny  |  No  |
+|  2 |   Sunny  |  No  |
+|  3 | Overcast |  Yes |
+|  4 |   Rain   |  Yes |
+|  5 |   Rain   |  Yes |
+|  6 |   Sunny  |  Yes |
+
+Classify the new tuple:
+
+> **Weather = Sunny**
+
+using the **Naive Bayes Classifier**.
+
+---
+
+# Step 1: Count Total Records
+
+Total records = **6**
+
+---
+
+# Step 2: Calculate Prior Probability
+
+| Class | Count | Probability |
+| ----- | ----: | ----------: |
+| Yes   |     4 | 4/6 = 0.667 |
+| No    |     2 | 2/6 = 0.333 |
+
+---
+
+# Step 3: Calculate Conditional Probability
+
+We need
+
+### P(Sunny | Yes)
+
+Among the **4 Yes** records:
+
+| Weather  | Count |
+| -------- | ----: |
+| Sunny    |     1 |
+| Overcast |     1 |
+| Rain     |     2 |
+
+[
+P(Sunny|Yes)=\frac{1}{4}=0.25
+]
+
+---
+
+### P(Sunny | No)
+
+Among the **2 No** records:
+
+| Weather | Count |
+| ------- | ----: |
+| Sunny   |     2 |
+
+[
+P(Sunny|No)=\frac{2}{2}=1
+]
+
+---
+
+# Step 4: Apply Naive Bayes Formula
+
+For **Yes**
+
+[
+P(Yes)\times P(Sunny|Yes)
+]
+
+[
+=0.667\times0.25
+]
+
+[
+=0.167
+]
+
+---
+
+For **No**
+
+[
+P(No)\times P(Sunny|No)
+]
+
+[
+=0.333\times1
+]
+
+[
+=0.333
+]
+
+---
+
+# Step 5: Compare Probabilities
+
+| Class | Posterior Probability |
+| ----- | --------------------: |
+| Yes   |                 0.167 |
+| No    |                 0.333 |
+
+---
+
+# Step 6: Final Classification
+
+Since
+
+[
+0.333>0.167
+]
+
+the new tuple is classified as
+
+[
+\boxed{\textbf{Play = No}}
+]
+
+---
+
+# Final Answer (Exam Format)
+
+**Given:** Weather = Sunny
+
+| Calculation           |       Value |
+| --------------------- | ----------: |
+| P(Yes)                | 4/6 = 0.667 |
+| P(No)                 | 2/6 = 0.333 |
+| P(Sunny|Yes)          |  1/4 = 0.25 |
+| P(Sunny|No)           |     2/2 = 1 |
+| P(Yes) × P(Sunny|Yes) |       0.167 |
+| P(No) × P(Sunny|No)   |       0.333 |
+
+### Result
+
+Since **0.333 > 0.167**, the unknown tuple is classified as:
+
+[
+\boxed{\textbf{Play = No}}
+]
+
+---
+
+**References (Uploaded Material):**
+
+* **09ClassAdvanced.ppt** – *Chapter 9: Classification: Advanced Methods* (Bayesian methods overview). 
+* **08ClassBasic.ppt** – *Classification: Basic Concepts*. 
+---
+---
+---
+---
+---
+
+# Explain Different Measures for Selecting the Best Split and Methods for Expressing Attribute Test Conditions in Decision Tree Induction Algorithm
+
+## Attribute Selection Measure
+
+In **Decision Tree Induction**, the most important step is selecting the **best attribute** for splitting the training data. The attribute is selected using a **heuristic or statistical measure**, and the attribute with the **best value** becomes the decision node. 
+
+The uploaded material discusses the following attribute selection measures.
+
+---
+
+# 1. Information Gain (ID3/C4.5)
+
+### Definition
+
+**Information Gain** measures the reduction in entropy after splitting the dataset on an attribute.
+
+The attribute having the **highest Information Gain** is selected as the best split.
+
+### Formula
+
+[
+\boxed{
+Gain(A)=Entropy(D)-Entropy_A(D)
+}
+]
+
+Where:
+
+* **Entropy(D)** = Entropy of the original dataset
+* **EntropyA(D)** = Entropy after splitting on attribute **A**
+
+### Characteristics
+
+* Based on **Entropy**.
+* Used in **ID3** and **C4.5** algorithms.
+* Selects the attribute with the **maximum information gain**. 
+
+---
+
+# 2. Entropy
+
+### Definition
+
+Entropy measures the **impurity** or **uncertainty** of a dataset.
+
+### Formula
+
+[
+Entropy(D)=
+-\sum p_i\log_2(p_i)
+]
+
+Where:
+
+* (p_i) = Probability of class (i)
+
+### Characteristics
+
+* Entropy = **0** → Pure dataset.
+* Higher entropy → More mixed classes. 
+
+---
+
+# Methods for Expressing Attribute Test Conditions
+
+The uploaded material explains that decision trees use different ways to express the test condition at each internal node.
+
+---
+
+## 1. Binary Split
+
+* The attribute is divided into **two branches**.
+* Mostly used for **binary attributes**.
+
+**Example**
+
+```
+Student?
+
+      Student
+      /     \
+    Yes      No
+```
+
+---
+
+## 2. Multi-way Split
+
+* The attribute is divided into **more than two branches**.
+* Suitable for **categorical attributes**.
+
+**Example**
+
+```
+Age
+
+      Age
+   /    |    \
+<=30 31-40  >40
+```
+
+The **Age** attribute in the uploaded *Buys_Computer* example is split into three branches. 
+
+---
+
+## 3. Split on Continuous-Valued Attributes
+
+For continuous attributes:
+
+* The values are **discretized** into intervals before or during tree construction.
+* The tree then splits using threshold values.
+
+The uploaded material notes:
+
+> **If attributes are continuous-valued, they are discretized in advance.** 
+
+**Example**
+
+```
+Income
+
+Income ≤ 50,000 ?
+
+      Yes        No
+```
+
+---
+
+## 4. Handling Missing Attribute Values
+
+If an attribute value is missing, the uploaded material suggests:
+
+* Assign the **most common value** of the attribute, or
+* Assign **probabilities** to each possible value. 
+
+---
+
+## Summary Table
+
+| Measure / Method               | Description                                                            |
+| ------------------------------ | ---------------------------------------------------------------------- |
+| **Entropy**                    | Measures impurity or uncertainty of the dataset.                       |
+| **Information Gain**           | Selects the attribute that gives the maximum reduction in entropy.     |
+| **Binary Split**               | Divides data into two branches.                                        |
+| **Multi-way Split**            | Divides data into multiple branches for categorical attributes.        |
+| **Continuous Attribute Split** | Discretizes continuous values into intervals before splitting.         |
+| **Handling Missing Values**    | Uses the most common value or probability assignment for missing data. |
+
+---
+
+# Advantages of Good Attribute Selection
+
+* Produces a smaller decision tree.
+* Improves classification accuracy.
+* Reduces overfitting.
+* Speeds up the learning process.
+* Makes the decision tree easier to understand.
+
+---
+
+# Conclusion
+
+Decision Tree Induction selects the best splitting attribute using **Information Gain**, which is based on **Entropy**. The decision tree can express attribute test conditions using **binary splits**, **multi-way splits**, and **continuous-value threshold tests**, while missing values can be handled by assigning the most common value or using probability-based assignment. These techniques help construct accurate and efficient decision trees.
+
+---
+
+## References (Uploaded Material)
+
+* **08ClassBasic.ppt** – *Algorithm for Decision Tree Induction*, *Brief Review of Entropy*, *Attribute Selection Measure: Information Gain (ID3/C4.5)*, *Attribute Selection: Information Gain*. 
+* **08ClassBasic.ppt** – *Enhancements to Basic Decision Tree Induction* (continuous-valued attributes and missing values). 
+
