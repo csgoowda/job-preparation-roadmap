@@ -1,6 +1,98 @@
 Sure. Let's learn **Similarity / Proximity Measures** from **absolute basics**, exactly like in a classroom. I'll explain **every step** and then solve a problem **line by line**.
 
 ---
+The question says:
+
+> **Find the similarity between Object 5 and Object 3 using any one similarity/proximity measure.**
+
+Since it says **"any one"**, we can use the **Euclidean Distance (Proximity Measure)** on the **numeric attribute (Marks of Test 2)**, which is the simplest and most common method.
+
+### Given
+
+| Object | Marks of Test 2 |
+| ------ | --------------: |
+| Obj 3  |              65 |
+| Obj 5  |              23 |
+
+---
+
+## Step 1: Write the Formula
+
+For one numeric attribute,
+
+[
+d=\sqrt{(x_1-x_2)^2}
+]
+
+---
+
+## Step 2: Substitute the Values
+
+[
+d=\sqrt{(65-23)^2}
+]
+
+---
+
+## Step 3: Subtract
+
+[
+65-23=42
+]
+
+[
+d=\sqrt{42^2}
+]
+
+---
+
+## Step 4: Square
+
+[
+42^2=1764
+]
+
+[
+d=\sqrt{1764}
+]
+
+---
+
+## Step 5: Square Root
+
+[
+\boxed{d=42}
+]
+
+---
+
+# Final Answer
+
+**Euclidean Distance (Proximity Measure) between Object 5 and Object 3 =**
+
+[
+\boxed{42}
+]
+
+This means the two objects are **42 units apart** based on the numeric attribute (Marks).
+
+---
+
+## If your examiner expects all attributes to be considered
+
+The dataset contains:
+
+* **Grade** (Nominal)
+* **Marks** (Numeric)
+* **Result** (Nominal)
+
+For mixed data, the appropriate measure is **Gower Similarity**, not Euclidean distance. If this question came from your textbook's "similarity/proximity measures" chapter, let me know the **page number or upload that page**, and I'll solve it using the exact method used in your textbook.
+
+---
+---
+---
+---
+---
 
 # Similarity / Proximity Measures
 
@@ -4165,3 +4257,350 @@ Subtract from 1
 2. Compute **Entropy**.
 3. Compute **Gini Index**.
 4. If asked, calculate **Information Gain** for each attribute and choose the attribute with the **highest gain** as the root node.
+
+
+   ---
+   ---
+   ---
+   ----
+   -----
+   ----------
+   ----------
+   Below is the complete solution for the given problem. (For exam questions, **population standard deviation** is commonly used unless the question explicitly asks for sample standard deviation.)
+
+---
+
+# Given Data
+
+## Age
+
+23, 23, 27, 27, 39, 41, 47, 49, 50, 52, 54, 54, 56, 57, 58, 58, 60, 61
+
+Total observations:
+
+[
+N=18
+]
+
+---
+
+## % Body Fat
+
+9.5, 26.5, 7.8, 17.8, 31.4, 25.9, 27.2, 27.2, 31.2, 34.6, 42.5, 28.8, 33.4, 30.2, 34.1, 32.9, 41.2, 35.7
+
+---
+
+# A) Mean
+
+## Formula
+
+[
+\boxed{\text{Mean}=\frac{\sum X}{N}}
+]
+
+---
+
+## Mean of Age
+
+Sum of all ages
+
+[
+23+23+27+27+39+41+47+49+50+52+54+54+56+57+58+58+60+61=836
+]
+
+Mean
+
+[
+=\frac{836}{18}
+]
+
+[
+=46.44
+]
+
+### Answer
+
+[
+\boxed{\text{Mean Age}=46.44}
+]
+
+---
+
+## Mean of % Fat
+
+Sum
+
+[
+=517.9
+]
+
+Mean
+
+[
+=\frac{517.9}{18}
+]
+
+[
+=28.77
+]
+
+### Answer
+
+[
+\boxed{\text{Mean %Fat}=28.77}
+]
+
+---
+
+# B) Median
+
+The data is already arranged.
+
+There are **18 observations (even number)**.
+
+Median position
+
+[
+=\frac{18}{2}=9^{th}\text{ and }10^{th}
+]
+
+---
+
+## Median of Age
+
+9th value = 50
+
+10th value = 52
+
+Median
+
+[
+=\frac{50+52}{2}
+]
+
+[
+=51
+]
+
+### Answer
+
+[
+\boxed{\text{Median Age}=51}
+]
+
+---
+
+## Median of %Fat
+
+9th value = 31.2
+
+10th value = 30.2
+
+Arrange the %fat values in ascending order first:
+
+7.8, 9.5, 17.8, 25.9, 26.5, 27.2, 27.2, 28.8, **30.2, 31.2**, 31.4, 32.9, 33.4, 34.1, 34.6, 35.7, 41.2, 42.5
+
+Median
+
+[
+=\frac{30.2+31.2}{2}
+]
+
+[
+=30.7
+]
+
+### Answer
+
+[
+\boxed{\text{Median %Fat}=30.7}
+]
+
+---
+
+# C) Standard Deviation
+
+Standard deviation measures **how far the data values are spread from the mean**.
+
+* Small SD → Values are close to the mean.
+* Large SD → Values are widely spread.
+
+### Formula
+
+genui{"probability_statistics_learning_block":{"type_id":"VARIANCE"}}
+
+Then,
+
+[
+SD=\sqrt{\text{Variance}}
+]
+
+---
+
+## Steps for Age
+
+### Mean
+
+[
+\bar X=46.44
+]
+
+### Compute
+
+For each age:
+
+* Find ((X-\bar X))
+* Square it
+* Add all squared differences
+* Divide by (N=18)
+* Take square root
+
+Result:
+
+[
+\boxed{\text{Standard Deviation of Age}=12.85}
+]
+
+---
+
+## Steps for %Fat
+
+### Mean
+
+[
+\bar X=28.77
+]
+
+Repeat the same process:
+
+* Find deviation
+* Square it
+* Sum all squares
+* Divide by 18
+* Take square root
+
+Result:
+
+[
+\boxed{\text{Standard Deviation of %Fat}=9.00}
+]
+
+---
+
+# Final Answers (Part A)
+
+| Measure            |   Age |  %Fat |
+| ------------------ | ----: | ----: |
+| Mean               | 46.44 | 28.77 |
+| Median             | 51.00 | 30.70 |
+| Standard Deviation | 12.85 |  9.00 |
+
+---
+
+# B) Box Plot
+
+A box plot uses the **Five-Number Summary**.
+
+## Age
+
+| Measure | Value |
+| ------- | ----: |
+| Minimum |    23 |
+| Q1      |    33 |
+| Median  |    51 |
+| Q3      |    57 |
+| Maximum |    61 |
+
+Simple representation:
+
+```text
+23 -----|======== 51 ========|----- 61
+        Q1                  Q3
+```
+
+---
+
+## %Fat
+
+Sorted values:
+
+7.8, 9.5, 17.8, 25.9, 26.5, 27.2, 27.2, 28.8, 30.2, 31.2, 31.4, 32.9, 33.4, 34.1, 34.6, 35.7, 41.2, 42.5
+
+Five-number summary:
+
+| Measure | Value |
+| ------- | ----: |
+| Minimum |   7.8 |
+| Q1      | 26.85 |
+| Median  |  30.7 |
+| Q3      | 34.35 |
+| Maximum |  42.5 |
+
+Simple representation:
+
+```text
+7.8 ----|======== 30.7 ========|---- 42.5
+        Q1                    Q3
+```
+
+---
+
+# C) Scatter Plot
+
+Plot:
+
+* X-axis → Age
+* Y-axis → %Fat
+
+The plotted points are:
+
+| Age | %Fat |
+| --: | ---: |
+|  23 |  9.5 |
+|  23 | 26.5 |
+|  27 |  7.8 |
+|  27 | 17.8 |
+|  39 | 31.4 |
+|  41 | 25.9 |
+|  47 | 27.2 |
+|  49 | 27.2 |
+|  50 | 31.2 |
+|  52 | 34.6 |
+|  54 | 42.5 |
+|  54 | 28.8 |
+|  56 | 33.4 |
+|  57 | 30.2 |
+|  58 | 34.1 |
+|  58 | 32.9 |
+|  60 | 41.2 |
+|  61 | 35.7 |
+
+**Interpretation:** The scatter plot shows a **positive relationship**—as **age increases, body fat generally increases**.
+
+---
+
+# D) QQ Plot
+
+A **Q-Q (Quantile-Quantile) Plot** compares the sample quantiles with the quantiles of a normal distribution.
+
+* If the points lie approximately on a **straight line**, the data is approximately **normally distributed**.
+* If the points deviate significantly from a straight line, the data is **not normally distributed**.
+
+For this dataset, the points would be expected to lie **reasonably close to a straight line**, indicating an approximately normal distribution with some variation.
+
+---
+
+# Final Exam Answer
+
+| Measure            |       Age |      %Fat |
+| ------------------ | --------: | --------: |
+| Mean               | **46.44** | **28.77** |
+| Median             | **51.00** | **30.70** |
+| Standard Deviation | **12.85** |  **9.00** |
+
+**Box Plot:** Draw using the five-number summaries above.
+
+**Scatter Plot:** Plot Age on the X-axis and %Fat on the Y-axis using the 18 coordinate pairs.
+
+**Q-Q Plot:** Plot sample quantiles against theoretical normal quantiles; an approximately straight-line pattern indicates approximate normality.
+
