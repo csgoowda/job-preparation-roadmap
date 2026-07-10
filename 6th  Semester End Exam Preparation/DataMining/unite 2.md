@@ -287,6 +287,390 @@ No larger frequent itemsets can be generated.
 
 ---
 
+
+---
+
+
+---
+
+
+----
+
+# FP-Growth Algorithm
+
+## Definition
+
+The **FP-Growth (Frequent Pattern Growth) algorithm** is an efficient method for mining **frequent itemsets** without generating candidate itemsets. It compresses the transaction database into a compact data structure called the **Frequent Pattern Tree (FP-Tree)** and extracts frequent patterns directly from the tree.
+
+Unlike the Apriori algorithm, **FP-Growth does not repeatedly scan the database or generate candidate itemsets**, making it much faster for large datasets.
+
+---
+
+# FP-Growth Algorithm
+
+**Input:**
+
+* Transaction database (D)
+* Minimum support threshold (min_sup)
+
+**Output:**
+
+* All frequent itemsets.
+
+## Algorithm
+
+1. **Scan the transaction database once** to determine the support count of each item.
+2. **Remove infrequent items** whose support is less than the minimum support threshold.
+3. **Sort the remaining frequent items** in descending order of their support.
+4. **Construct the FP-Tree** by scanning the database again and inserting the ordered frequent items into the tree.
+5. **Generate conditional pattern bases** for each frequent item.
+6. **Construct conditional FP-Trees** from the conditional pattern bases.
+7. **Recursively mine the conditional FP-Trees** to discover all frequent itemsets.
+8. Continue the process until all frequent patterns have been generated.
+
+---
+
+# Advantages of FP-Growth Algorithm
+
+1. **Does not generate candidate itemsets**, thereby reducing computational overhead.
+2. **Requires only two scans** of the transaction database.
+3. **Faster than the Apriori algorithm**, especially for large datasets.
+4. **Uses an FP-Tree**, which compresses the database and saves memory.
+5. **Efficient for dense datasets** containing many frequent itemsets.
+6. **Reduces execution time** by avoiding repeated database scans.
+
+---
+
+# Disadvantages of FP-Growth Algorithm
+
+1. **Construction of the FP-Tree can be complex** for beginners.
+2. **Consumes large memory** if the FP-Tree becomes very large.
+3. **Difficult to parallelize** because of its recursive tree structure.
+4. **Performance decreases** when the dataset contains very few common frequent items.
+5. **Implementation is more complicated** than the Apriori algorithm.
+
+---
+
+# Applications of FP-Growth Algorithm
+
+1. **Market Basket Analysis**
+
+   * Discovers products frequently purchased together.
+
+2. **Recommendation Systems**
+
+   * Recommends products, movies, or services based on user purchase patterns.
+
+3. **Retail Sales Analysis**
+
+   * Helps retailers identify purchasing trends and optimize product placement.
+
+4. **Web Usage Mining**
+
+   * Discovers frequently accessed web pages and navigation patterns.
+
+5. **Medical Diagnosis**
+
+   * Identifies relationships among diseases, symptoms, and treatments.
+
+6. **Fraud Detection**
+
+   * Detects unusual transaction patterns in banking and finance.
+
+7. **Bioinformatics**
+
+   * Finds frequent patterns in DNA sequences and protein structures.
+
+8. **Telecommunication**
+
+   * Analyzes customer calling and service usage patterns.
+
+---
+
+## 5-Mark Answer
+
+**FP-Growth Algorithm:** FP-Growth is a frequent pattern mining algorithm that discovers frequent itemsets **without generating candidate itemsets**. It compresses the transaction database into an **FP-Tree** and recursively mines the tree to generate all frequent patterns.
+
+**Advantages:**
+
+* Does not generate candidate itemsets.
+* Requires only two database scans.
+* Faster than Apriori.
+* Uses an FP-Tree for database compression.
+* Efficient for large and dense datasets.
+* Reduces execution time.
+
+**Disadvantages:**
+
+* FP-Tree construction is complex.
+* High memory usage for very large datasets.
+* Difficult to parallelize.
+* Less efficient when frequent items are few.
+* More difficult to implement than Apriori.
+
+**Applications:**
+
+* Market basket analysis.
+* Recommendation systems.
+* Retail sales analysis.
+* Web usage mining.
+* Medical diagnosis.
+* Fraud detection.
+* Bioinformatics.
+* Telecommunication analysis.
+
+
+# Explain the FP-Growth Algorithm with a Problem
+
+## FP-Growth Algorithm
+
+### Definition
+
+**FP-Growth (Frequent Pattern Growth)** is a **frequent pattern mining algorithm** that finds frequent itemsets **without generating candidate itemsets**. It compresses the transaction database into an **FP-tree (Frequent Pattern Tree)** and mines frequent patterns directly from this tree. 
+
+---
+
+# Basic Idea
+
+The uploaded material states that FP-Growth avoids the bottlenecks of Apriori by:
+
+* Avoiding explicit candidate generation.
+* Using a **depth-first search**.
+* Growing long frequent patterns from short ones using **local frequent items**.
+* Projecting the database and recursively mining conditional FP-trees.
+
+---
+
+# FP-Growth Algorithm Steps
+
+### Step 1: Scan the database once
+
+* Find all **frequent 1-itemsets**.
+* Remove infrequent items.
+
+### Step 2: Sort frequent items
+
+* Arrange items in **descending order of support** to create the **F-list**.
+
+### Step 3: Construct the FP-tree
+
+* Scan the database again.
+* Insert ordered frequent items into the FP-tree.
+* Share common prefixes to compress the database.
+
+### Step 4: Mine the FP-tree
+
+For each frequent item:
+
+1. Construct its **conditional pattern base**.
+2. Build the **conditional FP-tree**.
+3. Recursively repeat until:
+
+   * the FP-tree becomes empty, or
+   * it contains only one path, in which case all combinations of the path are frequent patterns.
+
+---
+
+# Solved Problem (from the uploaded material)
+
+### Minimum Support = 3
+
+### Transaction Database
+
+| TID | Original Items    | Ordered Frequent Items |
+| --- | ----------------- | ---------------------- |
+| 100 | {f,a,c,d,g,i,m,p} | {f,c,a,m,p}            |
+| 200 | {a,b,c,f,l,m,o}   | {f,c,a,b,m}            |
+| 300 | {b,f,h,j,o,w}     | {f,b}                  |
+| 400 | {b,c,k,s,p}       | {c,b,p}                |
+| 500 | {a,f,c,e,l,p,m,n} | {f,c,a,m,p}            |
+
+
+
+---
+
+## Step 1: Frequent 1-itemsets
+
+After the first scan:
+
+| Item | Support |
+| ---- | ------: |
+| f    |       4 |
+| c    |       4 |
+| a    |       3 |
+| b    |       3 |
+| m    |       3 |
+| p    |       3 |
+
+---
+
+## Step 2: F-list
+
+Arrange items by descending support:
+
+**F-list =**
+
+> **f → c → a → b → m → p**
+
+
+
+---
+
+## Step 3: Build the FP-Tree
+
+Insert each ordered transaction into the FP-tree.
+
+### Transaction 100
+
+```
+{}
+└── f:1
+     └── c:1
+          └── a:1
+               └── m:1
+                    └── p:1
+```
+
+---
+
+### Transaction 200
+
+Common prefix **f → c → a** already exists.
+
+```
+{}
+└── f:2
+     └── c:2
+          └── a:2
+               ├── m:1
+               │    └── p:1
+               └── b:1
+                    └── m:1
+```
+
+---
+
+### Transaction 300
+
+```
+{}
+└── f:3
+     ├── c:2
+     │    └── a:2
+     │         ├── m:1
+     │         │    └── p:1
+     │         └── b:1
+     │              └── m:1
+     └── b:1
+```
+
+---
+
+### Transaction 400
+
+Starts with **c**.
+
+```
+{}
+├── f:3
+│    ├── c:2
+│    │     └── a:2
+│    └── b:1
+└── c:1
+      └── b:1
+            └── p:1
+```
+
+---
+
+### Transaction 500
+
+Shares the prefix **f → c → a → m → p**, increasing the counts.
+
+Final FP-tree (conceptually):
+
+```
+{}
+├── f:4
+│    ├── c:3
+│    │     └── a:3
+│    │           ├── m:2
+│    │           │      └── p:2
+│    │           └── b:1
+│    │                  └── m:1
+│    └── b:1
+└── c:1
+      └── b:1
+             └── p:1
+```
+
+This matches the FP-tree construction shown in the uploaded material. 
+
+---
+
+## Step 4: Mine the FP-tree
+
+For each frequent item:
+
+* Construct the **conditional pattern base**.
+* Build the **conditional FP-tree**.
+* Recursively mine the tree.
+
+The uploaded material illustrates examples such as:
+
+* Conditional pattern base of **am**
+* Conditional pattern base of **cm**
+* Conditional FP-trees for these patterns
+
+and shows that the recursion continues until the tree is empty or contains a single path. 
+
+---
+
+# Advantages of FP-Growth
+
+According to the uploaded material:
+
+* No candidate generation.
+* No candidate testing.
+* Compressed database using an FP-tree.
+* No repeated scans of the entire database.
+* Faster than Apriori for large datasets because it uses divide-and-conquer and local frequent items.
+
+---
+
+# Disadvantages
+
+* FP-tree construction can become complex for implementation.
+* If the FP-tree does not fit into memory, database projection techniques are required (parallel or partition projection). 
+
+---
+
+# Final Frequent Items (from the example)
+
+The frequent items obtained are:
+
+* **f**
+* **c**
+* **a**
+* **b**
+* **m**
+* **p**
+
+These items are used to construct the FP-tree and recursively mine all frequent patterns.
+
+---
+
+## References (Uploaded Material)
+
+* **06FPBasic.ppt** – *Construct FP-tree from a Transaction Database*, *Frequent Pattern Growth Mining Method*, *Conditional FP-tree*, *Advantages of FP-Growth*, *Database Projection*.
+---
+
+
+---
+
+
+---
+
 ### References (Uploaded Material)
 
 * **06FPBasic.ppt** – *Apriori: A Candidate Generation & Test Approach*, *The Apriori Algorithm—An Example*, *The Apriori Algorithm (Pseudo-Code)*, *Further Improvement of the Apriori Method*.
