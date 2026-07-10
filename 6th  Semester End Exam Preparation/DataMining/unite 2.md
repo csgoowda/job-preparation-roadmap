@@ -812,3 +812,417 @@ These frequent itemsets can then be used to generate association rules.
 ---
 ---
 ---
+# Differentiate between Maximal Frequent Itemsets and Closed Frequent Itemsets. Solve a Related Problem.
+
+## Definitions
+
+### Closed Frequent Itemset
+
+A **closed frequent itemset** is a **frequent itemset** for which **no proper superset has the same support**.
+
+* It preserves the complete support information.
+* It is a **lossless compression** of frequent patterns.
+
+---
+
+### Maximal Frequent Itemset
+
+A **maximal frequent itemset (max-pattern)** is a **frequent itemset** for which **no frequent superset exists**.
+
+* It is the largest frequent itemset.
+* It reduces the number of patterns but does **not preserve exact support information** for all subsets.
+
+---
+
+# Difference between Closed Frequent Itemsets and Maximal Frequent Itemsets
+
+| Closed Frequent Itemset                                          | Maximal Frequent Itemset                          |
+| ---------------------------------------------------------------- | ------------------------------------------------- |
+| No super-itemset has the **same support**.                       | No **frequent super-itemset** exists.             |
+| Preserves support information.                                   | Does not preserve support information of subsets. |
+| Lossless compression of frequent patterns.                       | Lossy compression of frequent patterns.           |
+| Number of patterns is greater than or equal to maximal patterns. | Number of patterns is the smallest.               |
+| Used when support values are important.                          | Used to reduce the number of patterns.            |
+
+**Reference:** *Closed Patterns and Max-Patterns*
+
+---
+
+# Solved Problem
+
+## Given
+
+**Database**
+
+| Transaction ID | Items   |
+| -------------- | ------- |
+| T1             | A, B, C |
+| T2             | A, B    |
+| T3             | A, B, C |
+| T4             | A       |
+
+**Minimum Support = 2**
+
+---
+
+## Step 1: Find Frequent Itemsets
+
+| Itemset | Support |
+| ------- | ------: |
+| {A}     |       4 |
+| {B}     |       3 |
+| {C}     |       2 |
+| {A,B}   |       3 |
+| {A,C}   |       2 |
+| {B,C}   |       2 |
+| {A,B,C} |       2 |
+
+---
+
+## Step 2: Find Closed Frequent Itemsets
+
+Check whether any **superset has the same support**.
+
+* **{A} (4)** → No superset has support 4 → **Closed**
+* **{B} (3)** → {A,B} also has support 3 → **Not Closed**
+* **{C} (2)** → {A,C}, {B,C}, and {A,B,C} also have support 2 → **Not Closed**
+* **{A,B} (3)** → {A,B,C} has support 2 (different) → **Closed**
+* **{A,C} (2)** → {A,B,C} has support 2 (same) → **Not Closed**
+* **{B,C} (2)** → {A,B,C} has support 2 (same) → **Not Closed**
+* **{A,B,C} (2)** → No superset exists → **Closed**
+
+### Closed Frequent Itemsets
+
+* {A}
+* {A,B}
+* {A,B,C}
+
+---
+
+## Step 3: Find Maximal Frequent Itemsets
+
+A maximal frequent itemset has **no frequent superset**.
+
+* {A} → Frequent superset exists ({A,B}) → Not maximal.
+* {A,B} → Frequent superset exists ({A,B,C}) → Not maximal.
+* {A,B,C} → No frequent superset exists → **Maximal**.
+
+### Maximal Frequent Itemsets
+
+* **{A,B,C}**
+
+---
+
+# Final Answer
+
+### Closed Frequent Itemsets
+
+* {A}
+* {A,B}
+* {A,B,C}
+
+### Maximal Frequent Itemsets
+
+* {A,B,C}
+
+---
+
+## Key Points for Exams
+
+* **Closed Frequent Itemset:** No super-itemset has the **same support**.
+* **Maximal Frequent Itemset:** No **frequent super-itemset** exists.
+* Every **maximal frequent itemset is closed**, but **not every closed frequent itemset is maximal**.
+
+### References (Uploaded Material)
+
+* **06FPBasic.ppt** – *Closed Patterns and Max-Patterns*, *Mining Frequent Closed Patterns (CLOSET)*, *MaxMiner: Mining Max-Patterns*.
+
+
+---
+
+
+---
+
+
+---
+
+---
+---
+
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+
+# Explain the Compact Representation of Frequent Itemsets
+
+## Definition
+
+A **Compact Representation of Frequent Itemsets** is a technique used to **reduce the number of frequent itemsets** while preserving useful information. Instead of storing all frequent itemsets, only **Closed Frequent Itemsets** or **Maximal Frequent Itemsets (Max-Patterns)** are stored because a long frequent pattern contains a very large number of sub-patterns.
+
+---
+
+# Need for Compact Representation
+
+A long frequent pattern contains a **combinatorial number of sub-patterns**.
+
+For example,
+
+* An itemset **{a₁, a₂, …, a₁₀₀}** contains
+
+[
+2^{100}-1
+]
+
+possible non-empty sub-patterns.
+
+Mining and storing all these patterns requires large memory and high computation. Therefore, a compact representation is used to reduce the number of patterns. 
+
+---
+
+# Types of Compact Representation
+
+The uploaded material describes two compact representations.
+
+## 1. Closed Frequent Itemsets
+
+A **closed frequent itemset** is a **frequent itemset** for which **no proper super-itemset has the same support**.
+
+### Characteristics
+
+* Preserves complete support information.
+* It is a **lossless compression** of frequent patterns.
+* Used when exact support values are required.
+
+---
+
+## 2. Maximal Frequent Itemsets (Max-Patterns)
+
+A **maximal frequent itemset** is a **frequent itemset** for which **no frequent super-itemset exists**.
+
+### Characteristics
+
+* Represents only the largest frequent patterns.
+* Produces fewer patterns than closed frequent itemsets.
+* Does not preserve the exact support of all subsets (lossy compression).
+
+---
+
+# Comparison
+
+| Closed Frequent Itemsets               | Maximal Frequent Itemsets              |
+| -------------------------------------- | -------------------------------------- |
+| No super-itemset has the same support. | No frequent super-itemset exists.      |
+| Lossless compression.                  | Lossy compression.                     |
+| Preserves support information.         | Does not preserve support information. |
+| More patterns than maximal patterns.   | Fewer patterns.                        |
+
+---
+
+# Advantages of Compact Representation
+
+* Reduces the number of frequent patterns.
+* Saves storage space.
+* Improves mining efficiency.
+* Reduces the number of association rules generated.
+* Makes frequent pattern mining more scalable.
+
+---
+
+# Summary
+
+The compact representation of frequent itemsets reduces the large number of frequent patterns by storing only **Closed Frequent Itemsets** or **Maximal Frequent Itemsets**. **Closed frequent itemsets** preserve all support information (lossless), whereas **maximal frequent itemsets** store only the largest frequent patterns and provide a smaller but lossy representation.
+
+---
+
+## References (Uploaded Material)
+
+* **06FPBasic.ppt** – *Closed Patterns and Max-Patterns*, *Computational Complexity of Frequent Itemset Mining*. 
+* **04Mining Frequent Patterns.ppt** – *Mining Frequent Closed Patterns (CLOSET)*, *MaxMiner: Mining Max-Patterns*. 
+
+
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+
+# Explain the Calculation of Support and Confidence and How These Measures Are Used to Find the Best Association Rules
+
+## Association Rule
+
+An **association rule** is an implication of the form:
+
+[
+X \rightarrow Y
+]
+
+where **X** and **Y** are itemsets, and **X ∩ Y = ∅**.
+
+To evaluate the strength of an association rule, two important measures are used:
+
+1. **Support**
+2. **Confidence** 
+
+---
+
+# 1. Support
+
+### Definition
+
+**Support** measures **how frequently an itemset appears in the transaction database**.
+
+### Formula
+
+[
+\text{Support}(X \rightarrow Y)=\frac{\text{Number of transactions containing }(X \cup Y)}{\text{Total number of transactions}}
+]
+
+It indicates how common the rule is in the database. 
+
+---
+
+# 2. Confidence
+
+### Definition
+
+**Confidence** measures **how often items in Y appear in transactions that already contain X**.
+
+It indicates the reliability or accuracy of the association rule.
+
+### Formula
+
+[
+\text{Confidence}(X \rightarrow Y)=\frac{\text{Support}(X \cup Y)}{\text{Support}(X)}
+]
+
+or
+
+[
+\text{Confidence}(X \rightarrow Y)=P(Y|X)
+]
+
+
+
+---
+
+# Solved Example
+
+## Transaction Database
+
+| Transaction | Items               |
+| ----------- | ------------------- |
+| T1          | Milk, Bread         |
+| T2          | Milk, Bread, Butter |
+| T3          | Milk, Butter        |
+| T4          | Bread, Butter       |
+| T5          | Milk, Bread         |
+
+Find **Support** and **Confidence** for the rule:
+
+**Milk → Bread**
+
+---
+
+### Step 1: Total Transactions
+
+Total transactions = **5**
+
+---
+
+### Step 2: Transactions Containing Milk and Bread
+
+* T1
+* T2
+* T5
+
+Number of transactions = **3**
+
+---
+
+### Step 3: Calculate Support
+
+[
+\text{Support}=\frac{3}{5}=0.6
+]
+
+**Support = 60%**
+
+---
+
+### Step 4: Transactions Containing Milk
+
+* T1
+* T2
+* T3
+* T5
+
+Number of transactions = **4**
+
+---
+
+### Step 5: Calculate Confidence
+
+[
+\text{Confidence}=\frac{3}{4}=0.75
+]
+
+**Confidence = 75%**
+
+---
+
+# Final Result
+
+* **Support (Milk → Bread) = 60%**
+* **Confidence (Milk → Bread) = 75%**
+
+---
+
+# How Support and Confidence Help Find the Best Association Rules
+
+The uploaded material explains that the **support-confidence framework** is the basic method for evaluating association rules. A rule is considered interesting when it satisfies the user-defined thresholds for both measures. 
+
+### Support
+
+* Measures how frequently the rule occurs in the database.
+* Rules with **low support** are usually ignored because they occur very rarely.
+
+### Confidence
+
+* Measures the reliability of the rule.
+* A **high confidence** value indicates that when **X** occurs, **Y** is also likely to occur.
+
+### Best Association Rule
+
+A good association rule should have:
+
+* **High Support** (occurs frequently).
+* **High Confidence** (is reliable).
+
+Only rules satisfying the **minimum support** and **minimum confidence** thresholds are selected as strong association rules. 
+
+---
+
+# Advantages
+
+* Identifies strong relationships among items.
+* Helps generate reliable association rules.
+* Widely used in market basket analysis, recommendation systems, and customer purchasing pattern analysis. 
+
+---
+
+## References (Uploaded Material)
+
+* **04Mining Frequent Patterns.ppt** – *Chapter 5: Mining Frequent Patterns, Association and Correlations: Basic Concepts and Methods*, *Summary (support-confidence framework)*. 
+
