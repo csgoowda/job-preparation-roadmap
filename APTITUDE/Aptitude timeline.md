@@ -1,5 +1,7 @@
 Perfect. If your **only goal for the next 20 days is Aptitude**, then don't waste time equally on all topics.
 
+
+
 The topics most frequently asked in placements are:
 
 1. Percentages
