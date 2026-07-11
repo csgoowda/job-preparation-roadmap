@@ -1,4 +1,4 @@
-Based on the uploaded images, here is the complete **unit-wise question list** for **Data Mining**.
+
 
 ---
 
