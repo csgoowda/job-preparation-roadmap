@@ -1,6 +1,6 @@
 # APTITUDE
 
-> A comprehensive aptitude testing and skill assessment platform designed to evaluate user competencies across various domains.
+> A comprehensive aptitude testing and skill assessment platform designed to evaluate user competencies across various domains....
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Status](https://img.shields.io/badge/status-active-success.svg)](#)
