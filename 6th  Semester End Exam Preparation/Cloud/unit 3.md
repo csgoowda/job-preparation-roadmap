@@ -849,7 +849,187 @@ This answer follows your uploaded notes and uses the same terminology expected i
 ---
 ---
 ---
+# **Q17. Discuss the Monolithic Architecture and its Challenges.** *(10 Marks)*
 
+**Source:** Based on your uploaded **Module-3 – Application Architecture (Monolithic Architecture)**.  
+
+---
+
+# Definition
+
+**Monolithic Architecture** is a **software architecture** in which the **entire application is built as a single unit (single package)**. All components such as the **User Interface (UI), Business Logic, and Database Access Layer** are tightly integrated and deployed together as one application. 
+
+### **Keywords ⭐**
+
+* **Single Application**
+* **Single Package**
+* **Tightly Coupled**
+* **Single Deployment**
+* **Monolithic Architecture**
+
+---
+
+# Neat Diagram
+
+> **Draw the "Monolithic Architecture" diagram from your uploaded Module-3 PPT.**
+>
+> The diagram shows:
+>
+> * **User Interface (UI)**
+> * **Business Logic**
+> * **Database Access**
+> * All components combined into **one application** connected to a **single database**.
+>
+> **Use the exact diagram from your notes** for the exam. 
+
+---
+
+# Monolithic Architecture
+
+In **Monolithic Architecture**, all application components are combined into a **single executable program**.
+
+* The **User Interface (UI)** handles user interaction.
+* The **Business Logic** processes application functions.
+* The **Database Layer** stores and retrieves data.
+* All components are **developed, tested, deployed, and updated together**.
+
+**Example:** A traditional **Online Shopping Application** where Login, Product, Cart, Payment, and Order modules are part of one application.
+
+---
+
+# Challenges (Drawbacks) of Monolithic Architecture
+
+## **1. Less Agility (Less Flexibility)**
+
+* Even a **small change** requires rebuilding and redeploying the **entire application**.
+* Slows down response to business or customer requirements.
+
+**Keyword:** **Less Agility**
+
+---
+
+## **2. Unscalable (Hard to Scale)**
+
+* Only one feature may receive heavy traffic, but the **entire application must be scaled**.
+* Cannot scale individual modules independently.
+
+**Example:** During a sale, only the **Cart** module is busy, but the whole application must be duplicated.
+
+**Keyword:** **Scalability Problem**
+
+---
+
+## **3. Slow Development**
+
+* Features cannot be developed independently.
+* One feature must be completed before another starts.
+* Results in **longer development time**.
+
+**Keyword:** **Slow Development**
+
+---
+
+## **4. Poor Fault Tolerance**
+
+* A **single bug** can affect or crash the **entire application**.
+* Since components are **tightly coupled**, there is no isolation between services.
+
+**Keyword:** **Fault Tolerance**
+
+---
+
+## **5. Difficult to Adopt New Technologies**
+
+* Monolithic applications usually use **one programming language or framework**.
+* Adding new technologies is difficult because all components are interconnected.
+
+**Keyword:** **Technology Limitation**
+
+---
+
+## **6. Blocks Continuous Development**
+
+* Different teams work on the **same codebase**, leading to conflicts.
+* Individual features **cannot be deployed separately**.
+
+**Keyword:** **Continuous Development**
+
+---
+
+# Advantages of Monolithic Architecture
+
+* ✔ Easy to develop for **small applications**.
+* ✔ Simple deployment (single application).
+* ✔ Easy testing in the initial stages.
+* ✔ Suitable for **small development teams**.
+
+---
+
+# Summary Table
+
+| **Challenge**                     | **Description**                                      |
+| --------------------------------- | ---------------------------------------------------- |
+| **Less Agility**                  | Entire application must be rebuilt for small changes |
+| **Unscalable**                    | Cannot scale individual modules                      |
+| **Slow Development**              | Features are developed one after another             |
+| **Poor Fault Tolerance**          | One bug can crash the whole application              |
+| **Technology Limitation**         | Difficult to adopt new tools and frameworks          |
+| **Blocks Continuous Development** | Teams cannot deploy features independently           |
+
+---
+
+# Exam Keywords ⭐
+
+* **Monolithic Architecture**
+* **Single Package**
+* **Tightly Coupled**
+* **Single Deployment**
+* **Less Agility**
+* **Scalability**
+* **Fault Tolerance**
+* **Continuous Development**
+* **Technology Limitation**
+
+---
+
+# 📝 Easy Memory Trick
+
+Remember **"ASFTC"**
+
+* **A** → **Agility**
+* **S** → **Scalability**
+* **F** → **Fault Tolerance**
+* **T** → **Technology Limitation**
+* **C** → **Continuous Development**
+
+These are the **5 major challenges** of Monolithic Architecture.
+
+---
+
+# Conclusion
+
+**Monolithic Architecture** combines all application components into a **single deployable unit**. It is suitable for **small applications**, but as the application grows, it faces challenges such as **less agility, poor scalability, slow development, low fault tolerance, and difficulty in adopting new technologies**. Because of these limitations, many modern applications use **Microservices Architecture** instead.
+
+---
+
+## ⭐ Exam Tip
+
+For a **10-mark answer**, write in this order:
+
+1. **Definition**
+2. **Monolithic Architecture diagram** (from your uploaded Module-3 PPT)
+3. **Explanation of Monolithic Architecture**
+4. **Challenges (6 points)**
+5. **Advantages**
+6. **Summary Table**
+7. **Conclusion**
+
+This follows your uploaded notes and includes the **exact keywords** expected in your university examination.
+---
+---
+---
+---
+---
 
 # Explain Monolithic Architecture
 
