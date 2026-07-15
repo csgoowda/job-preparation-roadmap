@@ -1028,6 +1028,7 @@ This follows your uploaded notes and includes the **exact keywords** expected in
 ---
 ---
 ---
+nonono
 ---
 ---
 
@@ -1392,15 +1393,13 @@ This answer closely follows your uploaded **Unit–3 (Microservices)** notes, es
 ----
 --
 -
--
+-no
+no
 -
 -
 ----
 
 
-
-
-# UNIT 3 – Question 2 (20 Marks)
 
 # Explain Distributed Architecture
 
