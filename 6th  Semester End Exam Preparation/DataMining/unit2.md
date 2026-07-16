@@ -10,8 +10,6 @@ The algorithm uses a **candidate generation-and-test approach**. It first finds 
 
 ---
 
-
-
 ## Apriori Algorithm
 
 **Input:**
