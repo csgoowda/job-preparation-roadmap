@@ -1,5 +1,6 @@
 ## Apriori Algorithm
 
+
 ### Definition
 
 The **Apriori algorithm** is a classic algorithm for **mining frequent itemsets** and **association rules** over transactional databases. It identifies the frequent itemsets by using the **Apriori property**, which states that:
