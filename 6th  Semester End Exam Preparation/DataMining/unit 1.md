@@ -2051,3 +2051,379 @@ I → M → G → M → C → P
 ---
 
 
+# Explain Data Reduction Strategies
+
+*(10 Marks – Exam Answer)*
+
+---
+
+# What is Data Reduction?
+
+## Definition
+
+**Data Reduction** is the process of **reducing the size or volume of data while preserving the important information**. The reduced dataset should produce **almost the same analytical results** as the original dataset but with less storage and processing time. 
+
+### Simple Definition (2 Marks)
+
+> **Data Reduction is the process of reducing the amount of data while maintaining its essential information and quality.**
+
+---
+
+# Why is Data Reduction Required?
+
+Large datasets require:
+
+* More storage space
+* More processing time
+* More memory
+* Higher computational cost
+
+Data reduction helps to overcome these problems.
+
+---
+
+# Diagram
+
+```text
+          Large Dataset
+                │
+                ▼
+        Data Reduction
+                │
+   ┌────────────┼────────────┐
+   │            │            │
+Reduce      Maintain     Faster
+Storage     Information  Processing
+                │
+                ▼
+         Reduced Dataset
+```
+
+---
+
+# Data Reduction Strategies
+
+There are **five major data reduction strategies**:
+
+1. Data Cube Aggregation
+2. Attribute Subset Selection
+3. Dimensionality Reduction
+4. Numerosity Reduction
+5. Data Compression
+
+---
+
+# 1. Data Cube Aggregation
+
+## Definition
+
+Data Cube Aggregation summarizes data by moving from a **lower level of detail** to a **higher level of abstraction**.
+
+Instead of storing every transaction, summarized information is stored.
+
+---
+
+### Example
+
+Daily Sales
+
+| Day | Sales |
+| --- | ----: |
+| Mon |  1000 |
+| Tue |  1200 |
+| Wed |  1500 |
+
+↓
+
+Monthly Sales
+
+| Month   | Sales |
+| ------- | ----: |
+| January | 45000 |
+
+Instead of storing every day, only the monthly total is stored.
+
+---
+
+### Advantages
+
+* Reduces storage.
+* Faster analysis.
+* Easy reporting.
+
+---
+
+# 2. Attribute Subset Selection
+
+## Definition
+
+Select only the **important attributes** and remove irrelevant or redundant attributes.
+
+---
+
+### Example
+
+Original Dataset
+
+| Name | Age | Phone | Address | Marks |
+| ---- | --: | ----- | ------- | ----: |
+
+For predicting student performance, use only:
+
+| Age | Marks |
+
+Phone and Address are unnecessary.
+
+---
+
+### Advantages
+
+* Reduces dataset size.
+* Improves mining accuracy.
+* Faster computation.
+
+---
+
+# 3. Dimensionality Reduction
+
+## Definition
+
+Dimensionality Reduction reduces the **number of attributes (dimensions)** while preserving most of the useful information.
+
+Common techniques:
+
+* PCA (Principal Component Analysis)
+* Wavelet Transform
+* Feature Extraction
+
+---
+
+### Example
+
+Before
+
+```text
+50 Attributes
+```
+
+↓
+
+After PCA
+
+```text
+10 Important Attributes
+```
+
+---
+
+### Advantages
+
+* Reduces complexity.
+* Faster processing.
+* Better visualization.
+
+---
+
+# 4. Numerosity Reduction
+
+## Definition
+
+Numerosity Reduction reduces the **number of data records** by representing them in a smaller form.
+
+Methods include:
+
+* Sampling
+* Histograms
+* Clustering
+* Regression
+
+---
+
+### Example
+
+Original Dataset
+
+```text
+1,000,000 Records
+```
+
+↓
+
+Sampling
+
+```text
+10,000 Representative Records
+```
+
+The sample represents the original data.
+
+---
+
+### Advantages
+
+* Less memory usage.
+* Faster execution.
+* Suitable for large datasets.
+
+---
+
+# 5. Data Compression
+
+## Definition
+
+Data Compression stores data in a **compressed format** to reduce storage space.
+
+Types:
+
+* Lossless Compression
+* Lossy Compression
+
+---
+
+### Example
+
+Original File
+
+```text
+100 MB
+```
+
+↓
+
+Compressed File
+
+```text
+20 MB
+```
+
+---
+
+### Advantages
+
+* Saves storage.
+* Faster data transmission.
+
+---
+
+# Summary Table
+
+| Strategy                       | Purpose                       | Example               |
+| ------------------------------ | ----------------------------- | --------------------- |
+| **Data Cube Aggregation**      | Summarize detailed data       | Daily → Monthly Sales |
+| **Attribute Subset Selection** | Remove unnecessary attributes | Remove Phone, Address |
+| **Dimensionality Reduction**   | Reduce number of attributes   | PCA                   |
+| **Numerosity Reduction**       | Reduce number of records      | Sampling              |
+| **Data Compression**           | Compress data                 | ZIP File              |
+
+---
+
+# Advantages of Data Reduction
+
+* Reduces storage space.
+* Reduces memory usage.
+* Speeds up data mining.
+* Improves algorithm efficiency.
+* Reduces computational cost.
+* Makes data easier to analyze.
+
+---
+
+# Disadvantages
+
+* Some methods may lose information.
+* Compression and PCA may be complex.
+* Poor reduction may reduce mining accuracy.
+
+---
+
+# Real-Life Example
+
+A shopping website has **10 million customer records**.
+
+Instead of analyzing all records:
+
+* Use **Sampling** → Analyze 1 lakh records.
+* Remove unnecessary columns like Customer ID using **Attribute Subset Selection**.
+* Summarize daily sales into monthly sales using **Data Cube Aggregation**.
+
+This reduces processing time while still providing useful insights.
+
+---
+
+# Easy Memory Trick
+
+Remember the sentence:
+
+> **"All Doctors Need Comfortable Rooms."**
+
+| Word            | Strategy                                                      |
+| --------------- | ------------------------------------------------------------- |
+| **All**         | Aggregation                                                   |
+| **Doctors**     | Dimensionality Reduction                                      |
+| **Need**        | Numerosity Reduction                                          |
+| **Comfortable** | Compression                                                   |
+| **Rooms**       | Attribute Subset Selection *(Remember "Relevant attributes")* |
+
+Or simply remember:
+
+```text
+A → A → D → N → C
+```
+
+* **A** – Aggregation
+* **A** – Attribute Subset Selection
+* **D** – Dimensionality Reduction
+* **N** – Numerosity Reduction
+* **C** – Compression
+
+---
+
+# Difference Between the Strategies
+
+| Strategy                   | Reduces              |
+| -------------------------- | -------------------- |
+| Data Cube Aggregation      | Level of detail      |
+| Attribute Subset Selection | Number of attributes |
+| Dimensionality Reduction   | Feature dimensions   |
+| Numerosity Reduction       | Number of records    |
+| Data Compression           | Storage size         |
+
+---
+
+# Exam Writing Format
+
+1. Define **Data Reduction**.
+2. Explain why it is needed.
+3. Draw the data reduction diagram.
+4. Explain each strategy with:
+
+   * Definition
+   * Example
+   * Advantages
+5. Draw the summary table.
+6. Conclude that **data reduction reduces storage and processing time while preserving important information**.
+
+---
+
+## Keywords for Quick Revision
+
+* **Definition:** Reduce data size while preserving useful information.
+* **Strategies:**
+
+  * Data Cube Aggregation
+  * Attribute Subset Selection
+  * Dimensionality Reduction
+  * Numerosity Reduction
+  * Data Compression
+
+### Memory Formula
+
+```text
+A → A → D → N → C
+```
+
+**Aggregation → Attribute Selection → Dimensionality Reduction → Numerosity Reduction → Compression**
+
+---
+
+**Reference:** Based on your uploaded Unit 1 Data Mining materials covering **Data Reduction Strategies**. 
