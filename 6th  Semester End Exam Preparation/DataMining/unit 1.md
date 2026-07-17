@@ -943,3 +943,132 @@ E → M → M → C → J → S
 
 
 ---
+For this question:
+
+> **Find the similarity between Object 5 and Object 3 using any one similarity (proximity) measure.**
+
+The data contains **mixed attributes**:
+
+* Grade of Test 1 → **Nominal**
+* Marks of Test 2 → **Numeric**
+* Result of Test 3 → **Nominal**
+
+Since the question says **"any one similarity proximity measure"**, the simplest and most appropriate method for mixed attributes is the **Simple Matching Coefficient (SMC)**.
+
+---
+
+# Given Data
+
+| Attribute | Object 3   | Object 5 |
+| --------- | ---------- | -------- |
+| Grade     | B          | A        |
+| Marks     | 65         | 23       |
+| Result    | Not Passed | Passed   |
+
+---
+
+# Method: Simple Matching Coefficient (SMC)
+
+## Formula
+
+[
+\boxed{\text{SMC}=\frac{\text{Number of Matching Attributes}}{\text{Total Number of Attributes}}}
+]
+
+Where:
+
+* Matching Attributes = Number of attributes having the same value.
+* Total Attributes = Total number of attributes compared.
+
+---
+
+# Step 1: Compare Each Attribute
+
+| Attribute | Obj 3      | Obj 5  | Match? |
+| --------- | ---------- | ------ | :----: |
+| Grade     | B          | A      |  ✗ No  |
+| Marks     | 65         | 23     |  ✗ No  |
+| Result    | Not Passed | Passed |  ✗ No  |
+
+---
+
+# Step 2: Count Matches
+
+Matching attributes
+
+```text
+0
+```
+
+Total attributes
+
+```text
+3
+```
+
+---
+
+# Step 3: Apply Formula
+
+[
+SMC=\frac{0}{3}
+]
+
+[
+=0
+]
+
+---
+
+# Final Answer
+
+[
+\boxed{\text{Similarity (SMC)}=0}
+]
+
+### Interpretation
+
+Object 3 and Object 5 have **no matching attributes**, so their similarity is **0**, indicating they are **completely dissimilar** according to the Simple Matching Coefficient.
+
+---
+
+# Alternative Answer (If the examiner asks for Euclidean Distance)
+
+Use only the numeric attribute (Marks).
+
+### Formula
+
+[
+d=\sqrt{(65-23)^2}
+]
+
+[
+=\sqrt{42^2}
+]
+
+[
+=\sqrt{1764}
+]
+
+[
+=\boxed{42}
+]
+
+---
+
+# Which Answer Should You Write?
+
+For this dataset with **mixed attribute types (nominal + numeric)**:
+
+* ✅ **Best choice:** **Simple Matching Coefficient (SMC)** (uses all categorical attributes consistently).
+* ✅ **If the question specifically asks for a distance measure on numeric data:** Use **Euclidean Distance = 42**.
+
+**Exam Tip:** Since the question says **"using any one similarity proximity measure"**, write **SMC** unless your teacher has specifically taught a different measure for mixed data.
+--
+---
+---
+---
+---
+---
+---
+---
