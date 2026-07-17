@@ -1072,3 +1072,230 @@ For this dataset with **mixed attribute types (nominal + numeric)**:
 ---
 ---
 ---
+# What is Data Mining?
+
+*(10 Marks – Exam Answer)*
+
+## Definition
+
+**Data Mining** is the process of **discovering useful, hidden, previously unknown, and interesting patterns or knowledge from large amounts of data**. It uses techniques from **database systems, statistics, machine learning, and artificial intelligence** to analyze data and support decision-making. 
+
+### Simple Definition (2 Marks)
+
+> **Data Mining is the process of extracting useful information, hidden patterns, and knowledge from large databases.**
+
+---
+
+# Diagram
+
+```text
+            Large Database
+                  │
+                  ▼
+        Data Mining Techniques
+                  │
+                  ▼
+      Hidden Patterns / Knowledge
+                  │
+                  ▼
+          Better Decision Making
+```
+
+---
+
+# Why is Data Mining Needed?
+
+Large organizations generate huge amounts of data every day.
+
+Data Mining helps to:
+
+* Discover hidden patterns.
+* Predict future trends.
+* Improve decision-making.
+* Reduce business risks.
+* Increase profits.
+
+---
+
+# Example
+
+### Supermarket
+
+A supermarket stores thousands of customer transactions.
+
+Example:
+
+| Customer | Items Purchased   |
+| -------- | ----------------- |
+| 1        | Milk, Bread       |
+| 2        | Milk, Butter      |
+| 3        | Milk, Bread, Eggs |
+
+After applying Data Mining:
+
+```text
+Milk  →  Bread
+```
+
+This means customers who buy **Milk** often buy **Bread**.
+
+The supermarket can place Milk and Bread together or offer discounts to increase sales.
+
+---
+
+# Applications of Data Mining
+
+### 1. Banking
+
+* Credit card fraud detection
+* Loan approval
+
+### 2. Healthcare
+
+* Disease prediction
+* Patient diagnosis
+
+### 3. Education
+
+* Student performance analysis
+
+### 4. Retail
+
+* Market Basket Analysis
+* Product recommendation
+
+### 5. E-Commerce
+
+* Amazon product recommendations
+
+### 6. Telecommunications
+
+* Customer churn prediction
+
+---
+
+# Advantages of Data Mining
+
+* Finds hidden patterns.
+* Improves decision-making.
+* Predicts future trends.
+* Saves time.
+* Increases business profit.
+* Detects fraud.
+
+---
+
+# Disadvantages of Data Mining
+
+* Privacy issues.
+* High implementation cost.
+* Security risks.
+* Requires skilled professionals.
+* Can produce misleading results if data quality is poor.
+
+---
+
+# Characteristics of Data Mining
+
+* Extracts hidden knowledge.
+* Works with large datasets.
+* Uses machine learning and statistics.
+* Supports decision-making.
+* Predicts future behavior.
+
+---
+
+# Data Mining Process (Overview)
+
+```text
+Raw Data
+    │
+    ▼
+Data Cleaning
+    │
+    ▼
+Data Integration
+    │
+    ▼
+Data Selection
+    │
+    ▼
+Data Transformation
+    │
+    ▼
+Data Mining
+    │
+    ▼
+Pattern Evaluation
+    │
+    ▼
+Knowledge
+```
+
+---
+
+# Real-Life Examples
+
+| Area            | Example                        |
+| --------------- | ------------------------------ |
+| Banking         | Fraud detection                |
+| Healthcare      | Disease prediction             |
+| Shopping        | Product recommendation         |
+| Education       | Student performance prediction |
+| Social Media    | Friend recommendation          |
+| Online Shopping | Amazon recommendations         |
+
+---
+
+# Key Points for Exam
+
+* **Data Mining** extracts **hidden, useful, and previously unknown patterns** from large datasets.
+* It is a **step in the KDD (Knowledge Discovery in Databases) process**.
+* It combines **database technology, machine learning, statistics, and AI**.
+* It helps organizations make **better decisions**.
+
+---
+
+# Easy Memory Trick
+
+Remember the word:
+
+### **"D-MINE"**
+
+* **D** → Discover
+* **M** → Meaningful patterns
+* **I** → Information
+* **N** → New knowledge
+* **E** → Extract from databases
+
+---
+
+# One-Line Exam Definition
+
+> **Data Mining is the process of discovering useful, hidden, and previously unknown patterns or knowledge from large databases to support decision-making.**
+
+---
+
+# Exam Writing Format
+
+1. Define Data Mining.
+2. Draw the Data Mining process diagram.
+3. Explain why Data Mining is needed.
+4. Give one real-life example.
+5. Write applications.
+6. Write advantages and disadvantages.
+7. Conclude that Data Mining helps organizations discover knowledge and make better decisions.
+
+**Reference:** Based on your uploaded Unit 1 Data Mining materials covering **Introduction to Data Mining**. 
+---
+---
+---
+---=
+===
+---
+--
+-
+
+
+----
+
