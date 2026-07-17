@@ -1664,4 +1664,390 @@ C → I → T → R → D
 
 
 ----
+----
+----
+----
+---
+-----
+-
+
+-----
+--
+-----
+-----
+-----
+# Explain Different Methods for Handling Missing Data
+
+*(10 Marks – Exam Answer)*
+
+---
+
+# Definition
+
+**Missing data** refers to the absence of values for one or more attributes in a dataset. Missing values reduce the quality of data and may lead to incorrect results in data mining. Therefore, they should be handled before performing data mining. 
+
+### Simple Definition (2 Marks)
+
+> **Missing data is the absence of values in one or more fields of a dataset. Missing values should be handled to improve the quality and accuracy of data mining.**
+
+---
+
+# Why Does Missing Data Occur?
+
+Missing values may occur due to:
+
+* Data entry errors
+* Equipment or sensor failure
+* User not providing information
+* Data corruption
+* Incomplete data collection
+
+---
+
+# Example
+
+### Original Dataset
+
+| Student | Age | Marks |
+| ------- | --: | ----: |
+| A       |  20 |    85 |
+| B       |  21 |  NULL |
+| C       |  22 |    90 |
+
+Here, **Marks** of Student **B** is missing.
+
+---
+
+# Methods for Handling Missing Data
+
+There are **six commonly used methods**.
+
+---
+
+# 1. Ignore the Tuple (Delete the Record)
+
+## Definition
+
+If a record contains missing values and is not important, the entire record is removed.
+
+### Example
+
+Before
+
+| Student | Age | Marks |
+| ------- | --: | ----: |
+| A       |  20 |    85 |
+| B       |  21 |  NULL |
+| C       |  22 |    90 |
+
+After removing Student B
+
+| Student | Age | Marks |
+| ------- | --: | ----: |
+| A       |  20 |    85 |
+| C       |  22 |    90 |
+
+### Advantages
+
+* Very simple
+* Removes incomplete data
+
+### Disadvantages
+
+* Loss of useful information
+* Not suitable if many records are missing
+
+---
+
+# 2. Fill Missing Value Manually
+
+## Definition
+
+The missing value is entered manually by a user or expert.
+
+### Example
+
+Before
+
+| Student | Marks |
+| ------- | ----: |
+| B       |  NULL |
+
+After
+
+| Student | Marks |
+| ------- | ----: |
+| B       |    80 |
+
+### Advantages
+
+* High accuracy (if done correctly)
+
+### Disadvantages
+
+* Time-consuming
+* Not suitable for large datasets
+
+---
+
+# 3. Use a Global Constant
+
+## Definition
+
+Replace all missing values with a common constant such as:
+
+* Unknown
+* NULL
+* 0
+* N/A
+
+### Example
+
+Before
+
+| Student | City   |
+| ------- | ------ |
+| A       | Mysore |
+| B       | NULL   |
+
+After
+
+| Student | City    |
+| ------- | ------- |
+| A       | Mysore  |
+| B       | Unknown |
+
+### Advantages
+
+* Very easy
+* Fast
+
+### Disadvantages
+
+* May reduce data quality
+
+---
+
+# 4. Fill with Attribute Mean, Median, or Mode
+
+## Definition
+
+Replace the missing value using:
+
+* **Mean** → Numeric data
+* **Median** → Numeric data with outliers
+* **Mode** → Categorical data
+
+### Example (Mean)
+
+Marks:
+
+```text
+70
+80
+90
+NULL
+```
+
+Mean
+
+[
+=\frac{70+80+90}{3}
+=80
+]
+
+Replace NULL with **80**.
+
+### Advantages
+
+* Simple
+* Maintains dataset size
+
+### Disadvantages
+
+* May reduce data variation
+
+---
+
+# 5. Fill with Class Mean
+
+## Definition
+
+Replace the missing value using the **mean of records belonging to the same class**.
+
+### Example
+
+| Student | Department | Marks |
+| ------- | ---------- | ----: |
+| A       | ISE        |    80 |
+| B       | ISE        |    90 |
+| C       | ISE        |  NULL |
+
+Mean of ISE
+
+[
+=\frac{80+90}{2}
+=85
+]
+
+Replace NULL with **85**.
+
+### Advantages
+
+* More accurate than the global mean
+
+### Disadvantages
+
+* Requires class labels
+
+---
+
+# 6. Predict the Missing Value (Most Accurate)
+
+## Definition
+
+Use machine learning or statistical methods to estimate the missing value.
+
+Algorithms include:
+
+* Decision Tree
+* Naive Bayes
+* KNN
+* Regression
+
+### Example
+
+System predicts
+
+```text
+Missing Marks = 88
+```
+
+### Advantages
+
+* Highest accuracy
+* Preserves data quality
+
+### Disadvantages
+
+* More computationally expensive
+* Requires model building
+
+---
+
+# Summary Table
+
+| Method               | Description                         | Suitable For                    |
+| -------------------- | ----------------------------------- | ------------------------------- |
+| Ignore Tuple         | Delete the record                   | Few missing records             |
+| Manual Filling       | User enters value                   | Small datasets                  |
+| Global Constant      | Replace with "Unknown", "0", etc.   | Simple applications             |
+| Mean / Median / Mode | Replace using statistical values    | Numeric/Categorical data        |
+| Class Mean           | Replace using class average         | Classified data                 |
+| Prediction           | Predict using ML/statistical models | Large datasets, higher accuracy |
+
+---
+
+# Comparison Table
+
+| Method               |  Accuracy |      Time |
+| -------------------- | --------: | --------: |
+| Ignore Tuple         |       Low | Very Fast |
+| Manual Filling       |      High |      Slow |
+| Global Constant      |       Low |      Fast |
+| Mean / Median / Mode |    Medium |      Fast |
+| Class Mean           |      High |    Medium |
+| Prediction           | Very High |      Slow |
+
+---
+
+# Real-Life Example
+
+Hospital Dataset
+
+| Patient | Age | Blood Pressure |
+| ------- | --: | -------------: |
+| P1      |  25 |            120 |
+| P2      |  30 |           NULL |
+| P3      |  35 |            130 |
+
+Using the **Mean Method**:
+
+[
+\frac{120+130}{2}=125
+]
+
+Updated Dataset
+
+| Patient | Age | Blood Pressure |
+| ------- | --: | -------------: |
+| P1      |  25 |            120 |
+| P2      |  30 |            125 |
+| P3      |  35 |            130 |
+
+---
+
+# Easy Memory Trick
+
+Remember:
+
+### **"Ignore My Global Mean Class Prediction"**
+
+| Word           | Method                |
+| -------------- | --------------------- |
+| **Ignore**     | Ignore Tuple          |
+| **My**         | Manual Filling        |
+| **Global**     | Global Constant       |
+| **Mean**       | Mean / Median / Mode  |
+| **Class**      | Class Mean            |
+| **Prediction** | Predict Missing Value |
+
+Or simply remember:
+
+```text
+I → M → G → M → C → P
+```
+
+* **I** – Ignore Tuple
+* **M** – Manual Filling
+* **G** – Global Constant
+* **M** – Mean / Median / Mode
+* **C** – Class Mean
+* **P** – Prediction
+
+---
+
+# Exam Writing Format
+
+1. Define **Missing Data**.
+2. Explain why missing data occurs.
+3. List the six methods.
+4. Explain each method with:
+
+   * Definition
+   * Example
+   * Advantages
+   * Disadvantages
+5. Draw the summary table.
+6. Conclude that **prediction methods are the most accurate, while mean/median/mode are the most commonly used due to their simplicity**.
+
+---
+
+## Keywords for Quick Revision
+
+* **Ignore Tuple**
+* **Manual Filling**
+* **Global Constant**
+* **Mean / Median / Mode**
+* **Class Mean**
+* **Prediction (Machine Learning)**
+
+**Reference:** Based on your uploaded Unit 1 Data Mining materials covering **Data Cleaning** and **Methods for Handling Missing Values**. 
+----
+---
+---
+---
+---
+---
+
 
