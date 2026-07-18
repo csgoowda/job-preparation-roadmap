@@ -720,7 +720,322 @@ IR → IE → TC → TCL → TS → SA
 ---
 ---
 ---
+# Apply Apriori Technique to Mine Frequent Patterns from a Transactional Database. Illustrate the Steps with a Suitable Example Dataset.
 
+*(10 Marks – Exam Answer)*
+
+> **Note:** Your uploaded material mainly explains the **Apriori Algorithm for Frequent Itemset Mining**. Although the question says **"frequent sequence patterns"**, the Apriori technique is used to mine **frequent itemsets** from a transactional database. The following is the standard Apriori solution expected in exams.
+
+---
+
+# Definition
+
+**Apriori Algorithm** is a data mining algorithm used to **find frequent itemsets** and generate **association rules** from a transactional database.
+
+It is based on the **Apriori Property**:
+
+> **"If an itemset is frequent, then all of its non-empty subsets must also be frequent."**
+
+---
+
+# Apriori Property
+
+```text
+ABC is Frequent
+      │
+      ▼
+AB   AC   BC
+      │
+      ▼
+A   B   C
+
+(All subsets must also be frequent.)
+```
+
+---
+
+# Example Dataset
+
+## Minimum Support = 2
+
+| Transaction ID | Items   |
+| -------------- | ------- |
+| T1             | A, B, C |
+| T2             | A, B    |
+| T3             | A, C    |
+| T4             | B, C    |
+| T5             | A, B, C |
+
+---
+
+# Step 1: Generate Candidate 1-Itemsets (C₁)
+
+Count the support of each item.
+
+| Item | Support |
+| ---- | ------: |
+| A    |       4 |
+| B    |       4 |
+| C    |       4 |
+
+---
+
+# Step 2: Generate Frequent 1-Itemsets (L₁)
+
+Minimum Support = **2**
+
+All items satisfy the minimum support.
+
+| Frequent Itemset | Support |
+| ---------------- | ------: |
+| A                |       4 |
+| B                |       4 |
+| C                |       4 |
+
+---
+
+# Step 3: Generate Candidate 2-Itemsets (C₂)
+
+Possible combinations:
+
+* AB
+* AC
+* BC
+
+Count the support.
+
+| Itemset | Transactions | Support |
+| ------- | ------------ | ------: |
+| AB      | T1, T2, T5   |       3 |
+| AC      | T1, T3, T5   |       3 |
+| BC      | T1, T4, T5   |       3 |
+
+---
+
+# Step 4: Generate Frequent 2-Itemsets (L₂)
+
+Since support ≥ 2, all are frequent.
+
+| Frequent Itemset | Support |
+| ---------------- | ------: |
+| AB               |       3 |
+| AC               |       3 |
+| BC               |       3 |
+
+---
+
+# Step 5: Generate Candidate 3-Itemsets (C₃)
+
+Only one candidate:
+
+```text
+ABC
+```
+
+Support:
+
+| Itemset | Transactions | Support |
+| ------- | ------------ | ------: |
+| ABC     | T1, T5       |       2 |
+
+---
+
+# Step 6: Generate Frequent 3-Itemsets (L₃)
+
+Since support = 2,
+
+```text
+ABC
+```
+
+is frequent.
+
+| Frequent Itemset | Support |
+| ---------------- | ------: |
+| ABC              |       2 |
+
+---
+
+# Step 7: Stop
+
+No further candidates can be generated.
+
+---
+
+# Final Frequent Itemsets
+
+| Itemset | Support |
+| ------- | ------: |
+| A       |       4 |
+| B       |       4 |
+| C       |       4 |
+| AB      |       3 |
+| AC      |       3 |
+| BC      |       3 |
+| ABC     |       2 |
+
+---
+
+# Algorithm Flow
+
+```text
+Transaction Database
+        │
+        ▼
+Generate C₁
+        │
+        ▼
+Generate L₁
+        │
+        ▼
+Generate C₂
+        │
+        ▼
+Generate L₂
+        │
+        ▼
+Generate C₃
+        │
+        ▼
+Generate L₃
+        │
+        ▼
+No More Candidates
+        │
+        ▼
+Frequent Itemsets
+```
+
+---
+
+# Apriori Algorithm (Exam Steps)
+
+1. Scan the transaction database.
+2. Generate **Candidate Itemsets (Cₖ)**.
+3. Count the support of each candidate.
+4. Remove candidates whose support is less than the minimum support.
+5. Generate **Frequent Itemsets (Lₖ)**.
+6. Join frequent itemsets to create new candidates.
+7. Repeat until no new frequent itemsets are generated.
+
+---
+
+# Real-Life Example
+
+### Supermarket Transactions
+
+| Customer | Items Purchased     |
+| -------- | ------------------- |
+| C1       | Milk, Bread, Butter |
+| C2       | Milk, Bread         |
+| C3       | Bread, Butter       |
+| C4       | Milk, Butter        |
+
+After applying Apriori:
+
+```text
+Milk → Bread
+```
+
+This rule indicates that customers who buy **Milk** often buy **Bread**, helping stores optimize product placement and promotions.
+
+---
+
+# Advantages
+
+* Easy to understand.
+* Finds frequent itemsets efficiently.
+* Generates association rules.
+* Suitable for market basket analysis.
+
+---
+
+# Disadvantages
+
+* Multiple scans of the database.
+* Generates many candidate itemsets.
+* Slow for very large datasets.
+
+---
+
+# Summary Table
+
+| Step | Description                   |
+| ---- | ----------------------------- |
+| C₁   | Generate candidate 1-itemsets |
+| L₁   | Remove infrequent itemsets    |
+| C₂   | Generate candidate 2-itemsets |
+| L₂   | Remove infrequent itemsets    |
+| C₃   | Generate candidate 3-itemsets |
+| L₃   | Final frequent itemsets       |
+| Stop | No more candidates            |
+
+---
+
+# Easy Memory Trick
+
+Remember:
+
+### **"Scan Count Remove Join Repeat Stop"**
+
+| Step | Keyword    |
+| ---- | ---------- |
+| 1    | **Scan**   |
+| 2    | **Count**  |
+| 3    | **Remove** |
+| 4    | **Join**   |
+| 5    | **Repeat** |
+| 6    | **Stop**   |
+
+Or simply remember:
+
+```text
+S → C → R → J → R → S
+```
+
+* **S** = Scan
+* **C** = Count
+* **R** = Remove
+* **J** = Join
+* **R** = Repeat
+* **S** = Stop
+
+---
+
+# Exam Writing Format
+
+1. Define the Apriori Algorithm.
+2. State the Apriori Property.
+3. Write the transaction database.
+4. Generate C₁, L₁.
+5. Generate C₂, L₂.
+6. Generate C₃, L₃.
+7. Write the final frequent itemsets.
+8. Mention advantages and disadvantages.
+9. Conclude that Apriori discovers frequent itemsets and association rules from transaction databases.
+
+---
+
+## Keywords for Quick Revision
+
+* **Apriori Property**
+* **Candidate Itemsets (Cₖ)**
+* **Frequent Itemsets (Lₖ)**
+* **Minimum Support**
+* **Join**
+* **Prune**
+* **Association Rules**
+
+**Reference:** Based on your uploaded Unit 2 Data Mining materials covering the **Apriori Algorithm** and **Frequent Itemset Mining**.
+---
+---
+---
+---
+---
+---
+---
+---
+---
 
 **Reference:** Based on your uploaded Unit 5 Data Mining materials covering **Spatial Data Mining** and **Text Mining**. 
 --
