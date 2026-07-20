@@ -1247,3 +1247,294 @@ Collections in the .NET Framework provide efficient and flexible ways to store a
 
 * **Enumerators** – Using collections with `IEnumerator`, `MoveNext()`, `Current`, and `foreach`. 
 * **Arrays & Collections** – General collection concepts from the Arrays and Collections module. 
+---
+---
+---
+----
+---
+---
+----
+---
+---
+---
+---
+
+# **Q. Explain Overloading of Logical, Unary and Binary Operators with Suitable Examples**
+
+**(10 Marks)**
+
+---
+
+# Definition
+
+**Operator Overloading** is a feature of C# that allows us to give **special meaning** to operators (`+`, `-`, `!`, `>`, `<`, etc.) for **user-defined classes**.
+
+According to your notes:
+
+* Operator overloading allows you to define the meaning of an operator for a class.
+* It extends the use of operators without changing their original meaning.
+* Operator methods must be **public** and **static**.  
+
+---
+
+# Types of Operator Overloading
+
+1. Unary Operator Overloading
+2. Binary Operator Overloading
+3. Logical Operator Overloading
+
+---
+
+# 1. Unary Operator Overloading
+
+## Definition
+
+A **Unary Operator** works with **one operand**.
+
+Examples:
+
+* `++`
+* `--`
+* `-`
+* `!`
+
+---
+
+## Syntax
+
+```csharp
+public static ClassName operator ++(ClassName obj)
+```
+
+---
+
+## Simple Program
+
+```csharp
+using System;
+
+class Number
+{
+    public int x;
+
+    public Number(int a)
+    {
+        x = a;
+    }
+
+    public static Number operator ++(Number n)
+    {
+        n.x++;
+        return n;
+    }
+
+    static void Main()
+    {
+        Number n = new Number(10);
+
+        ++n;
+
+        Console.WriteLine(n.x);
+    }
+}
+```
+
+### Output
+
+```
+11
+```
+
+---
+
+# 2. Binary Operator Overloading
+
+## Definition
+
+A **Binary Operator** works with **two operands**.
+
+Examples:
+
+* `+`
+* `-`
+* `*`
+* `/`
+
+---
+
+## Syntax
+
+```csharp
+public static ClassName operator +(ClassName a, ClassName b)
+```
+
+---
+
+## Simple Program
+
+```csharp
+using System;
+
+class Number
+{
+    public int x;
+
+    public Number(int a)
+    {
+        x = a;
+    }
+
+    public static Number operator +(Number a, Number b)
+    {
+        return new Number(a.x + b.x);
+    }
+
+    static void Main()
+    {
+        Number n1 = new Number(10);
+        Number n2 = new Number(20);
+
+        Number n3 = n1 + n2;
+
+        Console.WriteLine(n3.x);
+    }
+}
+```
+
+### Output
+
+```
+30
+```
+
+---
+
+# 3. Logical Operator Overloading
+
+## Definition
+
+Logical operators are used for logical comparisons.
+
+Examples:
+
+* `!`
+* `true`
+* `false`
+* `&`
+* `|`
+
+---
+
+## Syntax
+
+```csharp
+public static bool operator true(ClassName obj)
+```
+
+---
+
+## Simple Program
+
+```csharp
+using System;
+
+class Number
+{
+    public int x;
+
+    public Number(int a)
+    {
+        x = a;
+    }
+
+    public static bool operator true(Number n)
+    {
+        return n.x > 0;
+    }
+
+    public static bool operator false(Number n)
+    {
+        return n.x <= 0;
+    }
+
+    static void Main()
+    {
+        Number n = new Number(5);
+
+        if (n)
+            Console.WriteLine("Positive");
+        else
+            Console.WriteLine("Negative");
+    }
+}
+```
+
+### Output
+
+```
+Positive
+```
+
+---
+
+# Difference Between Unary, Binary and Logical Operators
+
+| Unary Operator      | Binary Operator      | Logical Operator        |   |
+| ------------------- | -------------------- | ----------------------- | - |
+| One operand         | Two operands         | Logical comparison      |   |
+| `++`, `--`, `!`     | `+`, `-`, `*`, `/`   | `true`, `false`, `&`, ` | ` |
+| Modifies one object | Combines two objects | Returns Boolean value   |   |
+
+---
+
+# Advantages of Operator Overloading
+
+* Makes code easy to read.
+* Improves code reusability.
+* Gives meaningful behavior to operators.
+* Supports object-oriented programming.
+* Makes user-defined classes behave like built-in types.
+
+---
+
+# Conclusion
+
+Operator overloading allows user-defined classes to use operators in a meaningful way. Unary operators work with one operand, binary operators work with two operands, and logical operators perform logical comparisons. This improves readability and flexibility in C# programming.
+
+---
+
+# Notes Referred
+
+This answer is based on your uploaded **"9 Operator Overloading.pdf"**:
+
+* Definition and purpose of operator overloading. 
+* Operator overloading fundamentals and syntax for unary and binary operators. 
+* Binary operator overloading example using the `ThreeD` class. 
+
+> **Exam Tip:** These simplified programs are easy to write in an exam and clearly demonstrate **unary (`++`)**, **binary (`+`)**, and **logical (`true`/`false`)** operator overloading while matching the concepts explained in your notes.
+
+---
+---
+---
+----
+---
+---
+----
+---
+---
+---
+---
+
+
+
+---
+---
+---
+----
+---
+---
+----
+---
+---
+---
+---
