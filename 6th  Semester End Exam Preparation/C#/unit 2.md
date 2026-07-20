@@ -862,3 +862,388 @@ This program converts every digit of an integer into its corresponding English w
 ### Notes Referred
 
 * This **program is not present** in your uploaded notes. It is included because it appears in the **Model Question Paper** as a programming question. The arrays notes were not used for this program.
+  ----
+  ---
+  ---
+  ---
+----
+---
+---
+---
+---
+---
+--
+-
+----
+----
+
+Below are **10-mark university answers** in the same format you've requested: **Definition → Theory → Syntax → Program → Output → Explanation → Advantages → Applications → Conclusion → Notes Referred.** These answers are based on your uploaded **Arrays & Collections** and **Enumerators** notes.
+
+---
+
+# Q9(a). Demonstrate a Two-Dimensional Jagged Array with a Code Snippet.
+
+**(10 Marks)**
+
+## Definition
+
+A **Jagged Array** is an **array of arrays**. Each row of a jagged array can have a **different number of columns**.
+
+Unlike a two-dimensional array, where every row has the same number of columns, a jagged array allows variable-sized rows.
+
+According to your notes, arrays in C# are objects and can have multiple dimensions. A jagged array extends this concept by storing arrays as elements of another array. 
+
+---
+
+# Introduction
+
+Suppose we have marks of students:
+
+* Student 1 → 3 Subjects
+* Student 2 → 2 Subjects
+* Student 3 → 5 Subjects
+
+A normal 2D array wastes memory because every row must have the same number of columns.
+
+A **Jagged Array** solves this problem.
+
+---
+
+# Syntax
+
+```csharp
+datatype[][] arrayName = new datatype[rows][];
+```
+
+### Example
+
+```csharp
+int[][] marks = new int[3][];
+```
+
+---
+
+# C# Program
+
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int[][] arr = new int[3][];
+
+        arr[0] = new int[] {10,20};
+        arr[1] = new int[] {30,40,50};
+        arr[2] = new int[] {60,70,80,90};
+
+        Console.WriteLine("Jagged Array:");
+
+        for(int i=0;i<arr.Length;i++)
+        {
+            for(int j=0;j<arr[i].Length;j++)
+            {
+                Console.Write(arr[i][j] + " ");
+            }
+
+            Console.WriteLine();
+        }
+    }
+}
+```
+
+---
+
+# Output
+
+```text
+Jagged Array:
+
+10 20
+30 40 50
+60 70 80 90
+```
+
+---
+
+# Explanation
+
+### Step 1
+
+```csharp
+int[][] arr = new int[3][];
+```
+
+Creates a jagged array having **3 rows**.
+
+---
+
+### Step 2
+
+```csharp
+arr[0] = new int[]{10,20};
+```
+
+First row contains **2 elements**.
+
+---
+
+### Step 3
+
+```csharp
+arr[1] = new int[]{30,40,50};
+```
+
+Second row contains **3 elements**.
+
+---
+
+### Step 4
+
+```csharp
+arr[2] = new int[]{60,70,80,90};
+```
+
+Third row contains **4 elements**.
+
+---
+
+### Step 5
+
+```csharp
+arr[i].Length
+```
+
+Returns the number of elements in each row.
+
+---
+
+# Advantages
+
+* Saves memory.
+* Different row sizes are allowed.
+* Flexible.
+* Easy to manage irregular data.
+* Efficient for sparse data.
+
+---
+
+# Applications
+
+* Student marks
+* Matrix with unequal rows
+* Game boards
+* Scientific calculations
+
+---
+
+# Conclusion
+
+A jagged array is an array whose elements are themselves arrays. It allows each row to contain a different number of elements, making it memory efficient and flexible.
+
+---
+
+## Notes Referred
+
+* **Arrays and Collections** – Array concepts and multidimensional arrays. 
+
+---
+
+# Q9(b). Explain the Three Common Types of Collections Provided by the .NET Framework.
+
+**(10 Marks)**
+
+## Definition
+
+A **Collection** is an object used to store and manage a group of related objects dynamically.
+
+Unlike arrays, collections can automatically grow or shrink in size.
+
+According to your notes, collections can be traversed using **enumerators** or the `foreach` loop. Enumerators use `IEnumerator`, `MoveNext()`, `Current`, and `Reset()` to access collection elements. 
+
+---
+
+# Introduction
+
+The .NET Framework provides many collection classes to store and manipulate data efficiently.
+
+The **three common types of collections** are:
+
+1. ArrayList
+2. Stack
+3. Queue
+
+---
+
+# 1. ArrayList
+
+## Definition
+
+An **ArrayList** stores objects of different data types. It automatically increases its size when new elements are added.
+
+### Example
+
+```csharp
+using System;
+using System.Collections;
+
+class Program
+{
+    static void Main()
+    {
+        ArrayList list = new ArrayList();
+
+        list.Add(10);
+        list.Add("Hello");
+        list.Add(20.5);
+
+        foreach(var item in list)
+            Console.WriteLine(item);
+    }
+}
+```
+
+### Output
+
+```text
+10
+Hello
+20.5
+```
+
+### Advantages
+
+* Dynamic size
+* Stores different data types
+* Easy insertion and deletion
+
+---
+
+# 2. Stack
+
+## Definition
+
+A **Stack** follows the **LIFO (Last In First Out)** principle.
+
+The last inserted element is removed first.
+
+### Operations
+
+* Push()
+* Pop()
+* Peek()
+
+### Example
+
+```csharp
+using System;
+using System.Collections;
+
+class Program
+{
+    static void Main()
+    {
+        Stack s = new Stack();
+
+        s.Push(10);
+        s.Push(20);
+        s.Push(30);
+
+        Console.WriteLine(s.Pop());
+    }
+}
+```
+
+### Output
+
+```text
+30
+```
+
+---
+
+# 3. Queue
+
+## Definition
+
+A **Queue** follows the **FIFO (First In First Out)** principle.
+
+The first inserted element is removed first.
+
+### Operations
+
+* Enqueue()
+* Dequeue()
+* Peek()
+
+### Example
+
+```csharp
+using System;
+using System.Collections;
+
+class Program
+{
+    static void Main()
+    {
+        Queue q = new Queue();
+
+        q.Enqueue(10);
+        q.Enqueue(20);
+        q.Enqueue(30);
+
+        Console.WriteLine(q.Dequeue());
+    }
+}
+```
+
+### Output
+
+```text
+10
+```
+
+---
+
+# Difference Between the Three Collections
+
+| Collection | Principle    | Main Operations      |
+| ---------- | ------------ | -------------------- |
+| ArrayList  | Dynamic List | Add(), Remove()      |
+| Stack      | LIFO         | Push(), Pop()        |
+| Queue      | FIFO         | Enqueue(), Dequeue() |
+
+---
+
+# Advantages of Collections
+
+* Dynamic memory allocation.
+* Easy insertion and deletion.
+* Better than fixed-size arrays for changing data.
+* Rich set of built-in methods.
+* Can be traversed using `foreach` or an enumerator. 
+
+---
+
+# Applications
+
+* Employee records
+* Student databases
+* Undo operations (Stack)
+* Printer queue (Queue)
+* Task scheduling
+* Dynamic lists
+
+---
+
+# Conclusion
+
+Collections in the .NET Framework provide efficient and flexible ways to store and manipulate data. Among them, **ArrayList**, **Stack**, and **Queue** are the three most commonly used collection types, each suited to different application requirements.
+
+---
+
+## Notes Referred
+
+* **Enumerators** – Using collections with `IEnumerator`, `MoveNext()`, `Current`, and `foreach`. 
+* **Arrays & Collections** – General collection concepts from the Arrays and Collections module. 
