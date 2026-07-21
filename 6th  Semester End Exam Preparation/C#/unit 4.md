@@ -228,6 +228,254 @@ This answer is based on your uploaded **"12 Win Forms.pdf"**:
 ---
 ---
 ---
+# **Q. Develop a New Windows Form that is Capable of Handling the Following Events**
+
+### **a) MouseMove and MouseDown Events**
+
+### **b) KeyUp Event**
+
+**(10 Marks)**
+
+---
+
+# Definition
+
+A **Windows Form** is a graphical user interface (GUI) provided by the **System.Windows.Forms** namespace. It enables users to interact with applications using controls such as buttons, labels, text boxes, mouse, and keyboard.
+
+Windows Forms support **events**, which occur when the user performs an action like moving the mouse, clicking the mouse, or pressing a key.
+
+According to your notes, Windows Forms applications use the **Form** and **Application** classes, and they can capture and respond to **mouse and keyboard events**.  
+
+---
+
+# Events Used
+
+### 1. MouseMove Event
+
+* Occurs whenever the mouse pointer moves over the form.
+* Used to obtain the mouse coordinates.
+
+---
+
+### 2. MouseDown Event
+
+* Occurs when a mouse button is pressed.
+* Used to detect Left, Right or Middle mouse button clicks.
+
+---
+
+### 3. KeyUp Event
+
+* Occurs when a keyboard key is released.
+* Used to detect which key the user has pressed.
+
+---
+
+# Algorithm
+
+1. Import `System.Windows.Forms`.
+2. Create a class that inherits from `Form`.
+3. Register `MouseMove`, `MouseDown`, and `KeyUp` events.
+4. Display the mouse coordinates when the mouse moves.
+5. Display the mouse button when clicked.
+6. Display the released keyboard key.
+7. Run the form using `Application.Run()`.
+
+---
+
+# C# Program
+
+```csharp
+using System;
+using System.Windows.Forms;
+
+class MyForm : Form
+{
+    public MyForm()
+    {
+        Text = "Windows Form Events";
+        Width = 400;
+        Height = 300;
+
+        this.MouseMove += Form_MouseMove;
+        this.MouseDown += Form_MouseDown;
+        this.KeyUp += Form_KeyUp;
+    }
+
+    void Form_MouseMove(object sender, MouseEventArgs e)
+    {
+        Text = "Mouse Position : " + e.X + ", " + e.Y;
+    }
+
+    void Form_MouseDown(object sender, MouseEventArgs e)
+    {
+        MessageBox.Show("Mouse Button : " + e.Button);
+    }
+
+    void Form_KeyUp(object sender, KeyEventArgs e)
+    {
+        MessageBox.Show("Key Released : " + e.KeyCode);
+    }
+
+    [STAThread]
+    static void Main()
+    {
+        Application.EnableVisualStyles();
+        Application.Run(new MyForm());
+    }
+}
+```
+
+---
+
+# Sample Output
+
+### When Mouse Moves
+
+```
+Mouse Position : 150 , 80
+```
+
+---
+
+### When Left Mouse Button is Clicked
+
+```
+Mouse Button : Left
+```
+
+---
+
+### When 'A' Key is Released
+
+```
+Key Released : A
+```
+
+---
+
+# Explanation
+
+### Creating Form
+
+```csharp
+class MyForm : Form
+```
+
+Creates a Windows Form by inheriting the `Form` class.
+
+---
+
+### MouseMove Event
+
+```csharp
+this.MouseMove += Form_MouseMove;
+```
+
+Whenever the mouse moves inside the form,
+
+```csharp
+e.X
+e.Y
+```
+
+return the X and Y coordinates.
+
+---
+
+### MouseDown Event
+
+```csharp
+this.MouseDown += Form_MouseDown;
+```
+
+When the user presses a mouse button,
+
+```csharp
+e.Button
+```
+
+returns:
+
+* Left
+* Right
+* Middle
+
+---
+
+### KeyUp Event
+
+```csharp
+this.KeyUp += Form_KeyUp;
+```
+
+When a keyboard key is released,
+
+```csharp
+e.KeyCode
+```
+
+returns the key name such as:
+
+* A
+* B
+* Enter
+* Space
+
+---
+
+### Application.Run()
+
+```csharp
+Application.Run(new MyForm());
+```
+
+Starts the application and displays the form.
+
+---
+
+# Advantages
+
+* Supports interactive GUI applications.
+* Handles mouse and keyboard input easily.
+* Improves user experience.
+* Enables event-driven programming.
+* Easy to develop desktop applications.
+
+---
+
+# Applications
+
+* Drawing Applications
+* Paint Software
+* Games
+* Text Editors
+* Student Management Systems
+* Calculator Applications
+
+---
+
+# Conclusion
+
+Windows Forms provide an event-driven programming model where user actions generate events. The **MouseMove** event tracks mouse movement, **MouseDown** detects mouse clicks, and **KeyUp** captures keyboard input after a key is released. These events make desktop applications interactive and user-friendly.
+
+---
+
+# Notes Referred
+
+This answer is based on your uploaded **"12 Win Forms.pdf"**:
+
+* Objectives of Windows Forms, including handling **mouse and keyboard events**. 
+* `System.Windows.Forms` namespace, **Form** class, and core infrastructure. 
+
+### ⭐ Exam Tip
+
+For full marks:
+
+1. Write the **definition** of Windows Forms and events.
+2. Explain **MouseMove**, **MouseDown**, and **KeyUp** events.
+3. Write the **complete program**.
+4. Include **sample output** and a brief explanation of each event. This is typically sufficient for a 10-mark answer.
 
 
 ---
