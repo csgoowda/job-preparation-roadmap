@@ -741,6 +741,107 @@ A **single screw extruder** is used for **simple plastic processing**, while a *
 ----
 ----
 
+# **Q. Explain the Thermal and Hot Melt Lamination Process with a Neat Diagram.** *(10 Marks)*
+
+## **Answer**
+
+## **Introduction**
+
+**Thermal lamination** and **Hot melt lamination** are lamination processes used to join two layers of material. Both processes use **heat**, but the bonding method is different. 
+
+---
+
+# **1. Thermal (Heat) Lamination**
+
+### **Definition**
+
+In **thermal lamination**, **two thermoplastic layers are joined using heat and pressure**. No adhesive is used. It is also called **Fusion Lamination**. 
+
+### **Process**
+
+1. Two thermoplastic layers are placed together.
+2. Heat is applied to soften the layers.
+3. Pressure is applied to join the layers.
+4. After cooling, a laminated sheet is obtained. 
+
+### **Applications**
+
+* Smart labels
+* Printed films
+* Heat-sensitive packaging 
+
+### **Neat Diagram**
+
+📖 **Notes Page:** **5** 
+
+```text
+Thermoplastic Layer 1
+          │
+          ▼
+   Heat + Pressure
+          │
+Thermoplastic Layer 2
+          │
+          ▼
+   Laminated Sheet
+```
+
+---
+
+# **2. Hot Melt Lamination**
+
+### **Definition**
+
+In **hot melt lamination**, a **hot melt adhesive** is melted and applied between two materials. The layers are then pressed together to form a laminated sheet. 
+
+### **Process**
+
+1. Heat the **hot melt adhesive**.
+2. Apply the molten adhesive to one layer.
+3. Place the second layer over it.
+4. Press the layers together.
+5. Cool the laminate to obtain a strong bond. 
+
+### **Applications**
+
+* Flexible packaging
+* Labels
+* Cartons
+* Packaging films 
+
+### **Neat Diagram**
+
+📖 **Notes Page:** **6** 
+
+```text
+ Material 1
+     │
+Hot Melt Adhesive
+     │
+ Material 2
+     │
+Heat + Pressure
+     │
+Laminated Sheet
+```
+
+---
+
+## **Difference Between Thermal and Hot Melt Lamination**
+
+| **Thermal Lamination**                       | **Hot Melt Lamination**                 |
+| -------------------------------------------- | --------------------------------------- |
+| No adhesive is used.                         | Hot melt adhesive is used.              |
+| Heat and pressure join thermoplastic layers. | Adhesive melts and bonds two layers.    |
+| Also called **Fusion Lamination**.           | Uses **hot melt adhesive** for bonding. |
+
+
+
+---
+
+## **Conclusion**
+
+**Thermal lamination** joins thermoplastic layers using **heat and pressure**, whereas **hot melt lamination** joins materials using a **melted adhesive**. Both processes are used to produce strong laminated packaging materials. 
 
 ---
 ---
