@@ -217,6 +217,110 @@ Circular Die
 ---
 ----
 ----
+# **Q. Explain the Blown Film Co-Extrusion Process with a Neat Diagram.** *(10 Marks)*
+
+## **Answer**
+
+### **Introduction**
+
+**Blown film coextrusion** is a process in which **multiple molten polymers are simultaneously extruded through a circular (annular) die** to form a **tubular multilayer film**. The tube is inflated with air to form a **bubble**, cooled, collapsed, and wound into rolls. This process is widely used for manufacturing multilayer packaging films. 
+
+---
+
+# **Blown Film Co-Extrusion Process**
+
+### **Definition**
+
+Blown film coextrusion is a manufacturing process where **two or more molten polymers** are extruded through a **circular die** to produce a **multilayer tubular film** with improved strength and barrier properties. 
+
+---
+
+## **Process Steps**
+
+### **1. Polymer Melting**
+
+* Different polymers (LDPE, LLDPE, HDPE, PA, EVOH, etc.) are melted in **separate extruders**.
+* Each extruder produces one layer of the final film. 
+
+### **2. Coextrusion Die**
+
+* The molten polymers enter a **circular (annular) coextrusion die**.
+* The die combines the polymer melts into a **multilayer tubular film**. 
+
+### **3. Film Inflation (Bubble Formation)**
+
+* Air is introduced inside the tube to inflate it into a **bubble**.
+* The bubble determines the **film width, thickness, and orientation**. 
+
+### **4. Cooling**
+
+* The bubble is cooled by **air rings** placed around the die.
+* Cooling solidifies the multilayer film while maintaining its shape. 
+
+### **5. Collapse and Flattening**
+
+* The cooled bubble is collapsed between **nip rollers**.
+* It forms a **lay-flat tube**. 
+
+### **6. Winding**
+
+* The lay-flat film is wound into rolls.
+* It can also be slit into individual reels or opened into sheets. 
+
+---
+
+## **Advantages**
+
+* Produces **biaxially oriented** films with high strength.
+* Excellent **barrier properties** and sealability.
+* Suitable for **wide films and tubular bags**.
+* Cost-effective for multilayer flexible packaging. 
+
+---
+
+## **Applications**
+
+* Food packaging films (snacks, meat, dairy)
+* Garbage and shopping bags
+* Agricultural films
+* Shrink films
+* Industrial liners
+* Milk pouches 
+
+---
+
+# **Neat Diagram (from Notes)**
+
+📖 **Notes Page:** **Page 18** (Blown Film Coextrusion Process) 
+
+```text
+        Polymer A    Polymer B    Polymer C
+             │            │            │
+       ┌─────┴─────┐ ┌────┴────┐ ┌─────┴─────┐
+       │ Extruder  │ │Extruder │ │ Extruder  │
+       └─────┬─────┘ └────┬────┘ └─────┬─────┘
+             └────────────┼────────────┘
+                          │
+                 Circular (Annular) Die
+                          │
+                    Inflated Air Bubble
+                       ↑           ↑
+                    Air Rings (Cooling)
+                          │
+                     Nip Rollers
+                          │
+                    Lay-flat Film
+                          │
+                       Winding Roll
+```
+
+> **Exam Tip:** Draw the **original blown film coextrusion diagram from Page 18 of your Unit 2 notes** in the answer sheet for maximum marks. 
+
+---
+
+## **Conclusion**
+
+Blown film coextrusion is an important manufacturing process used to produce **multilayer plastic films** with **high strength, excellent barrier properties, and good sealability**. It is widely used in the **food, pharmaceutical, and industrial packaging industries**. 
 
 
 ---
