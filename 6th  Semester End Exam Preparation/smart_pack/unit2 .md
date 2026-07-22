@@ -110,6 +110,100 @@ I'll also include:
 ----
 ----
 
+# **Q. Differentiate Between Cast Film Coextrusion and Blown Film Coextrusion (Sheet Making Process).** *(10 Marks)*
+
+## **Answer**
+
+### **Introduction**
+
+**Cast film coextrusion** and **blown film coextrusion** are two important sheet/film-making processes used to manufacture **multilayer plastic films**. They differ in the method of film formation, cooling, orientation, and applications.  
+
+---
+
+## **Difference Between Cast Film Coextrusion and Blown Film Coextrusion**
+
+| **Cast Film Coextrusion**                                  | **Blown Film Coextrusion**                                                   |
+| ---------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| Uses a **flat (coat-hanger) die**.                         | Uses a **circular (annular) die**.                                           |
+| Molten polymer is extruded as a **flat sheet**.            | Molten polymer is extruded as a **tubular film (bubble)**.                   |
+| Film is cooled rapidly on a **chill roll**.                | Film is cooled by **air rings** around the bubble.                           |
+| Produces **high clarity and gloss** due to rapid cooling.  | Produces **lower clarity** because cooling is slower.                        |
+| Has **excellent thickness (gauge) uniformity**.            | Thickness control is **less precise**.                                       |
+| Film is oriented mainly in the **Machine Direction (MD)**. | Film is **biaxially oriented** (Machine Direction and Transverse Direction). |
+| Lower puncture resistance.                                 | Better strength, toughness, and puncture resistance.                         |
+| Suitable for thin films and high-speed production.         | Suitable for tubular bags, shrink films, and wide films.                     |
+
+ 
+
+---
+
+## **Applications**
+
+### **Cast Film Coextrusion**
+
+* Food packaging films
+* Stretch films
+* Cling films
+* Medical films
+* Laminate base films 
+
+### **Blown Film Coextrusion**
+
+* Food packaging films
+* Garbage and shopping bags
+* Agricultural films
+* Shrink films
+* Industrial liners
+* Milk pouches 
+
+---
+
+# **Diagram (from Notes)**
+
+📖 **Notes Pages:**
+
+* **Cast Film Coextrusion – Pages 13–15**
+* **Blown Film Coextrusion – Pages 17–19**  
+
+### **Cast Film Coextrusion**
+
+```text
+Extruders
+    │
+    ▼
+ Flat Die
+    │
+    ▼
+ Chill Roll (Cooling)
+    │
+    ▼
+ Film Roll
+```
+
+### **Blown Film Coextrusion**
+
+```text
+Extruders
+    │
+    ▼
+Circular Die
+    │
+ Inflated Bubble
+    │
+ Air Cooling
+    │
+ Nip Rollers
+    │
+ Film Roll
+```
+
+> **Note:** Draw the original diagrams from **Pages 13–19** of your Unit 2 notes in the examination for better marks.  
+
+---
+
+## **Conclusion**
+
+**Cast film coextrusion** is preferred where **high clarity and uniform thickness** are required, whereas **blown film coextrusion** is preferred for applications requiring **high strength, toughness, and biaxial orientation**, such as food packaging bags and shrink films.  
 
 ---
 ---
