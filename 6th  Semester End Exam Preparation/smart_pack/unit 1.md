@@ -893,6 +893,110 @@ For this question, **draw the structural formulas neatly** in your answer sheet 
 ----
 
 
+# **Q. Compare Glass and Metal Packaging with Examples.** *(10 Marks)*
+
+## **Answer**
+
+### **Introduction**
+
+**Glass** and **metal** are widely used traditional packaging materials. Glass is preferred for its **chemical inertness and transparency**, whereas metal is preferred for its **high strength and excellent barrier properties**. The choice depends on the type of product and packaging requirements. 
+
+---
+
+## **Comparison between Glass and Metal Packaging**
+
+| **Property**           | **Glass Packaging**                        | **Metal Packaging**                                     |
+| ---------------------- | ------------------------------------------ | ------------------------------------------------------- |
+| **Strength**           | Fragile and easily breakable               | High strength and durable                               |
+| **Barrier Properties** | Excellent barrier to gases and moisture    | Excellent barrier to moisture, oxygen, light, and gases |
+| **Chemical Nature**    | Chemically inert, does not react with food | May corrode or react if not properly coated             |
+| **Transparency**       | Transparent, allows product visibility     | Opaque, product cannot be seen                          |
+| **Weight**             | Heavy                                      | Heavy (Aluminium is lighter than steel)                 |
+| **Heat Resistance**    | High, suitable for sterilization           | High, suitable for canning and heat processing          |
+| **Recyclability**      | 100% recyclable without quality loss       | Highly recyclable (steel and aluminium)                 |
+| **Cost**               | Higher transportation cost due to weight   | Higher production cost than paper and plastic           |
+
+---
+
+## **Applications with Examples**
+
+### **Glass Packaging**
+
+**Applications:**
+
+* Beverages
+* Jams and pickles
+* Pharmaceuticals
+* Cosmetics
+
+**Examples:**
+
+* Juice bottles
+* Jam jars
+* Perfume bottles
+* Medicine vials 
+
+---
+
+### **Metal Packaging**
+
+**Applications:**
+
+* Canned foods
+* Beverages
+* Chemicals
+* Aerosol products
+
+**Examples:**
+
+* Soft drink cans
+* Food cans
+* Oil drums
+* Biscuit tins 
+
+---
+
+## **Advantages**
+
+### **Glass**
+
+* Chemically inert.
+* Excellent barrier to gases and moisture.
+* Transparent and attractive.
+* Reusable and 100% recyclable.
+
+### **Metal**
+
+* High mechanical strength.
+* Excellent barrier against moisture, oxygen, and light.
+* Long shelf life.
+* Suitable for heat processing and sterilization.
+
+ 
+
+---
+
+## **Flow Diagram**
+
+```text
+        Traditional Packaging Materials
+                  │
+        ┌─────────┴─────────┐
+        │                   │
+      Glass              Metal
+        │                   │
+ Transparent         High Strength
+ Chemically Inert    Excellent Barrier
+ Recyclable          Heat Resistant
+        │                   │
+ Bottles, Jars       Cans, Drums, Tins
+```
+
+---
+
+## **Conclusion**
+
+Glass packaging is preferred for products requiring **chemical inertness and visibility**, while metal packaging is suitable for products requiring **high strength, excellent barrier protection, and long shelf life**. Both materials are widely used in the food, beverage, and pharmaceutical industries. 
 
   
 ---
