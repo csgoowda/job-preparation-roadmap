@@ -342,6 +342,96 @@ Packaging preserves **food safety and quality** by providing **barrier protectio
 ---
 ---
 ----
+# **Q. Explain the Properties and Applications of Nylon and Polyethylene.** *(10 Marks)*
+
+## **Answer**
+
+### **Introduction**
+
+**Nylon** and **Polyethylene (PE)** are widely used plastic materials in the packaging industry. They are preferred because of their excellent mechanical strength, flexibility, moisture resistance, and durability.
+
+---
+
+# **1. Nylon (Polyamide)**
+
+### **Properties of Nylon**
+
+* High **mechanical strength** and toughness.
+* Excellent **puncture and abrasion resistance**.
+* Good **gas and oxygen barrier** properties.
+* Resistant to **oils, grease, and chemicals**.
+* Good **heat resistance**.
+* Flexible and durable.
+
+### **Applications of Nylon**
+
+* Vacuum packaging for **meat and seafood**.
+* Retort and boil-in-bag food pouches.
+* Packaging films for cheese and frozen foods.
+* Pharmaceutical packaging.
+* Multilayer laminated films.
+
+**Examples:** Vacuum meat pouches, cheese packaging, medical packaging.
+
+---
+
+# **2. Polyethylene (PE)**
+
+### **Properties of Polyethylene**
+
+* Lightweight and flexible.
+* Excellent **moisture resistance**.
+* Good chemical resistance.
+* Good heat-sealing properties.
+* Non-toxic and suitable for food contact.
+* Easy to process and cost-effective.
+
+### **Applications of Polyethylene**
+
+* Shopping bags and carry bags.
+* Milk and edible oil pouches.
+* Food packaging films.
+* Bottles and containers.
+* Shrink wraps and stretch films.
+
+**Examples:** Milk packets, grocery bags, detergent bottles, food storage bags.
+
+---
+
+## **Comparison Table**
+
+| **Property**        | **Nylon** | **Polyethylene (PE)** |
+| ------------------- | --------- | --------------------- |
+| Strength            | Very high | Moderate              |
+| Flexibility         | Good      | Excellent             |
+| Moisture Resistance | Moderate  | Excellent             |
+| Gas Barrier         | Excellent | Poor to moderate      |
+| Heat Resistance     | High      | Moderate              |
+| Cost                | Higher    | Lower                 |
+
+---
+
+## **Flow Diagram**
+
+```text
+         Packaging Plastics
+                │
+      ┌─────────┴─────────┐
+      │                   │
+    Nylon           Polyethylene
+      │                   │
+ High Strength      Moisture Resistance
+ Gas Barrier        Heat Sealability
+ Heat Resistant     Lightweight
+      │                   │
+ Vacuum Packs      Bags, Bottles, Films
+```
+
+---
+
+## **Conclusion**
+
+**Nylon** is mainly used where **high strength, puncture resistance, and gas barrier properties** are required, whereas **Polyethylene (PE)** is widely used for **bags, bottles, films, and pouches** because of its **excellent moisture resistance, flexibility, and low cost**.
 
 ---
 ---
@@ -356,6 +446,179 @@ Packaging preserves **food safety and quality** by providing **barrier protectio
 ----
 ----
 
+# **Q. Mention Different Forms of Traditional Packaging with Examples.** *(10 Marks)*
+
+## **Answer**
+
+### **Introduction**
+
+Traditional packaging uses conventional materials such as **wood, metal, glass, paper & paperboard, and plastics** to protect, store, transport, and market products. Each material is available in different forms depending on the application. 
+
+---
+
+# **Different Forms of Traditional Packaging**
+
+## **1. Wood Packaging**
+
+**Forms:**
+
+* Wooden crates and boxes
+* Pallets and skids
+* Barrels and drums
+* Wooden frames and supports
+
+**Examples:**
+
+* Heavy machinery
+* Fruits and vegetables
+* Wine and beer barrels
+* Glass sheets 
+
+---
+
+## **2. Metal Packaging**
+
+**Forms:**
+
+* Aluminum cans and steel cans
+* Metal drums and barrels
+* Foil packaging
+* Metal containers and tins
+
+**Examples:**
+
+* Soft drinks
+* Canned foods
+* Chemicals and oils
+* Coffee and biscuit tins 
+
+---
+
+## **3. Glass Packaging**
+
+**Forms:**
+
+* Glass bottles
+* Glass jars
+* Ampoules and vials
+* Glass tubes and containers
+
+**Examples:**
+
+* Beverages
+* Pickles and jams
+* Pharmaceutical liquids
+* Cosmetics 
+
+---
+
+## **4. Paper and Paperboard Packaging**
+
+**Forms:**
+
+* Corrugated boxes and cartons
+* Paper bags and wrappers
+* Molded pulp trays
+* Laminated paperboard
+
+**Examples:**
+
+* Shipping cartons
+* Shopping bags
+* Egg trays
+* Juice cartons (Tetra Pak) 
+
+---
+
+## **5. Plastic Packaging**
+
+**Forms:**
+
+* Plastic bottles and jars
+* Plastic films and pouches
+* Blister packs and clamshells
+* Shrink wrap and stretch films
+
+**Examples:**
+
+* Water bottles
+* Snack food pouches
+* Medicine blister packs
+* Pallet wrapping 
+
+---
+
+## **Summary Table**
+
+| **Packaging Material** | **Forms**                                     | **Examples**                          |
+| ---------------------- | --------------------------------------------- | ------------------------------------- |
+| **Wood**               | Crates, pallets, barrels, frames              | Fruits, machinery, wine               |
+| **Metal**              | Cans, drums, foil, tins                       | Beverages, canned food, oils          |
+| **Glass**              | Bottles, jars, vials, tubes                   | Juices, jams, medicines               |
+| **Paper & Paperboard** | Cartons, bags, trays, laminated boards        | Egg trays, cartons, wrappers          |
+| **Plastic**            | Bottles, pouches, blister packs, shrink films | Water bottles, snack packs, medicines |
+
+---
+
+## **Conclusion**
+
+Traditional packaging materials such as **wood, metal, glass, paper & paperboard, and plastics** are widely used because they provide **protection, convenience, durability, and ease of transportation**. The choice of material depends on the nature of the product and its packaging requirements. 
+
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+----
+----
+
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+----
+----
+
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+----
+----
+
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+----
+----
+
+
+
+  
 ---
 ---
 ---
