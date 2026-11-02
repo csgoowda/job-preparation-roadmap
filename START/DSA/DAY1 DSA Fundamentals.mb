@@ -1,0 +1,228 @@
+Let's move forward, bro! 💪
+
+# Day 1 – Session 3: DSA Fundamentals
+
+Week 1 · Day 1
+
+35 minutes
+
+Today's goal: Understand what DSA is, why companies test it, and learn the basics of time and space complexity.
+
+## 1. What is DSA? (5 minutes)
+
+DSA stands for:
+
+- Data Structures: Ways to organize and store data.
+- Algorithms: Step-by-step instructions to solve a problem.
+
+Example: Imagine you have 1,000 employee records and want to find employee ID 105.
+
+You need:
+
+- A data structure to store employee records.
+- An algorithm to find the employee efficiently.
+
+## 2. What is an algorithm? (5 minutes)
+
+An algorithm is a sequence of steps used to solve a problem.
+
+Example: Find the largest number in an array.
+
+```
+int[] numbers = { 10, 50, 20, 80, 30 };
+
+int largest = numbers[0];
+
+foreach (int number in numbers)
+{
+    if (number > largest)
+    {
+        largest = number;
+    }
+}
+
+Console.WriteLine(largest);
+```
+
+Output:
+
+```
+80
+```
+
+How does it work?
+
+1. Start with the first number: 10.
+2. Compare it with 50. Update largest to 50.
+3. Compare with 20. Keep 50.
+4. Compare with 80. Update to 80.
+5. Compare with 30. Keep 80.
+
+Final answer: 80.
+
+## 3. What is time complexity? (10 minutes)
+
+Time complexity describes how the number of operations grows as the input size increases.
+
+It is commonly expressed using Big-O notation.
+
+### Three important complexities
+
+O(1) – Constant time
+
+Very efficient
+
+```
+int[] numbers = { 10, 20, 30 };
+Console.WriteLine(numbers[0]);
+```
+
+Directly accesses the first element, regardless of array size.
+
+O(n) – Linear time
+
+```
+foreach (int number in numbers)
+{
+    Console.WriteLine(number);
+}
+```
+
+If there are 100 elements, it processes 100 elements.
+
+O(n²) – Quadratic time
+
+```
+for (int i = 0; i < n; i++)
+{
+    for (int j = 0; j < n; j++)
+    {
+        Console.WriteLine(i + j);
+    }
+}
+```
+
+With 10 elements, the inner operation runs 100 times.
+
+### Complexity comparison
+
+| Complexity | Example      | Growth    |
+| ---------- | ------------ | --------- |
+| O(1)       | Array access | Constant  |
+| O(n)       | Single loop  | Linear    |
+| O(n²)      | Nested loops | Quadratic |
+
+[Big O Notation for Tech Babies: An Ice Cream🍨Analogy💡 | by Harshith GP | Dec, 2025 | Medium](https://images.openai.com/static-rsc-4/NB4TkCQElbcTY00BtPyqxilXO8PQnaRBKCy2Y3Gq3p4HcdhgeG-Rx1GPkf5S19TxLztTNpXtJh0IUbx06Y_EYqS3qB-Dt-iDyIZbOIgfSF77hRikiAJHiUF8EHSLkC_6Z6cV2kQykNIm1SLZqrjJh-_bueY6OlYukb_XdwnQ2y0?purpose=inline)
+
+[medium.com](https://medium.com/%40Rare_Breed/big-o-notation-for-tech-babies-ice-cream-analogy-f16a762a9ee5?utm_source=chatgpt.com)
+
+Remember: Generally, lower growth rates are better for large inputs.
+
+## 4. What is space complexity? (5 minutes)
+
+Space complexity describes how much additional memory an algorithm needs as input size grows.
+
+Example:
+
+```
+int number = 100;
+```
+
+This uses a fixed amount of additional memory: O(1).
+
+Example:
+
+```
+int[] numbers = new int[100];
+```
+
+This array uses memory proportional to its size: O(n).
+
+## 5. Practical exercise (5 minutes)
+
+Write a C# program that:
+
+1. Creates an array of five numbers.
+2. Calculates their sum.
+3. Prints the sum.
+
+Expected output:
+
+```
+Numbers: 10, 20, 30, 40, 50
+Sum: 150
+```
+
+Try writing it yourself before checking any solution.
+
+## 6. Knowledge test (5 minutes)
+
+DSA quiz
+
+1\. What does DSA stand for?
+
+Data Structure and Algorithm
+
+Database and Software Application
+
+Data System Analysis
+
+Correct
+
+2\. Which complexity represents constant time?
+
+O(n)
+
+O(1)
+
+O(n²)
+
+Correct
+
+3\. What is the complexity of a single loop over n elements?
+
+O(1)
+
+O(n)
+
+O(n²)
+
+Correct
+
+4\. What is the complexity of two nested loops, each running n times?
+
+O(n)
+
+O(1)
+
+O(n²)
+
+Correct
+
+5\. What does space complexity measure?
+
+Execution speed
+
+Memory usage growth
+
+Number of lines of code
+
+Correct
+
+# Score: 5/5
+
+Try again
+
+📊 Study Progress
+
+Week 1 · Day 1
+
+In progress
+
+- Session 1 – Project development: Completed (90 min).
+- Session 2 – C# fundamentals: Taught; practical and quiz not yet verified.
+- Session 3 – DSA: Learning now.
+- Pending: OOP, aptitude, English.
+- Overall Day 1: Estimated 55%; completion not yet verified.
+
+Your task: Complete the array-sum program and DSA quiz. I'll check your answers before moving to OOP.
