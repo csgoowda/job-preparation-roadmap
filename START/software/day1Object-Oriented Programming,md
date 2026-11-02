@@ -1,0 +1,212 @@
+Let's continue, bro! 💪
+
+# Day 1 – Session 4: Object-Oriented Programming (OOP)
+
+Week 1 · Day 1
+
+30 minutes
+
+Today's goal: Understand OOP, classes and objects. These are very important for C# and .NET backend development.
+
+## 1. What is OOP? (5 minutes)
+
+OOP stands for Object-Oriented Programming.
+
+It is a programming approach where we organize code using classes and objects.
+
+Think about a real-world car.
+
+A car has:
+
+- Properties: Colour, brand, model.
+- Behaviours: Start, stop, accelerate.
+
+In programming, we represent these using classes and objects.
+
+## 2. What is a class? (5 minutes)
+
+A class is a blueprint or template used to create objects.
+
+Example:
+
+```
+class Car
+{
+    public string brand = "Toyota";
+    public string color = "Black";
+
+    public void Start()
+    {
+        Console.WriteLine("Car started");
+    }
+}
+```
+
+Here, `Car` is a class.
+
+It defines the properties and behaviour that its objects can have.
+
+## 3. What is an object? (5 minutes)
+
+An object is an instance of a class.
+
+Example:
+
+```
+Car myCar = new Car();
+
+Console.WriteLine(myCar.brand);
+Console.WriteLine(myCar.color);
+
+myCar.Start();
+```
+
+Output:
+
+```
+Toyota
+Black
+Car started
+```
+
+Understand the difference:
+
+| Class             | Object                     |
+| ----------------- | -------------------------- |
+| Blueprint         | Instance of a blueprint    |
+| Defines structure | Uses the defined structure |
+| Car               | myCar                      |
+| Employee          | employee1                  |
+
+[Sample Animated Lesson Videos – Imagnica](https://images.openai.com/static-rsc-4/nH8hm5bBC3XjDKK4X7CYd2fsgxvM-D2EqBPvWX4XXHhHvaDwhENYmOWWB0PMCp9Y31V-T3Ds9AI1Q8AbXgd7dfCDznnR1nLim7tNFzbJN69XB7A_AEAHasOb-nS8NckaYqkPyrj6z6ofOqIjH-ICnbeVQf1tqTkN5TYFA4B3lMk?purpose=inline)
+
+[imagnica.com](https://imagnica.com/showcase?utm_source=chatgpt.com)
+
+## 4. Apply OOP to our Employee Management project (10 minutes)
+
+Now let's create an employee class.
+
+Open `Program.cs` and replace its content with:
+
+```
+Employee employee1 = new Employee();
+
+employee1.name = "Rahul";
+employee1.employeeId = 101;
+employee1.salary = 35000;
+
+employee1.DisplayDetails();
+
+class Employee
+{
+    public string name = "";
+    public int employeeId;
+    public decimal salary;
+
+    public void DisplayDetails()
+    {
+        Console.WriteLine("Employee Details");
+        Console.WriteLine($"Name: {name}");
+        Console.WriteLine($"ID: {employeeId}");
+        Console.WriteLine($"Salary: {salary}");
+    }
+}
+```
+
+Run:
+
+```
+dotnet run
+```
+
+Expected output:
+
+```
+Employee Details
+Name: Rahul
+ID: 101
+Salary: 35000
+```
+
+### Understand this code
+
+- `class Employee` – creates an Employee blueprint.
+- `employee1` – creates an employee object.
+- `new Employee()` – creates a new instance.
+- `name`, `employeeId`, `salary` – properties represented here by public fields.
+- `DisplayDetails()` – method that displays employee information.
+
+Important: We used public fields for simplicity. Later, we will learn properties, constructors and encapsulation, which are preferred for proper application design.
+
+## 5. Knowledge test (5 minutes)
+
+OOP quiz – 5 questions
+
+1\. What is OOP?
+
+Object-Oriented Programming
+
+Online Operating Program
+
+Object Operation Process
+
+Correct
+
+2\. What is a class?
+
+A database
+
+A blueprint for creating objects
+
+A variable
+
+Correct
+
+3\. What is an object?
+
+An instance of a class
+
+A programming language
+
+A database table
+
+Correct
+
+4\. Which keyword creates an object in C#?
+
+class
+
+public
+
+new
+
+Correct
+
+5\. In our example, what is Employee?
+
+Object
+
+Class
+
+Method
+
+Correct
+
+# Score: 5/5
+
+Try again
+
+📊 Study Progress
+
+Week 1 · Day 1
+
+In progress
+
+- Session 1 – Project development: Completed.
+- Session 2 – C# fundamentals: Taught; practical/quiz verification pending.
+- Session 3 – DSA fundamentals: Taught; exercise/quiz verification pending.
+- Session 4 – OOP: Learning now.
+- Pending: Aptitude and English.
+- Overall Day 1: Approximately 65% (estimated, not verified).
+
+Your task: Run the Employee class program, complete the quiz and send me your result. Then we'll move to aptitude.
